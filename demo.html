@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Circular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        .center {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        #circle {
+            position: relative;
+            font-size: 25px;
+            overflow: hidden;
+        }
+
+        #circle span {
+            margin-top: -95px;
+            margin-left: 0px;
+            position: absolute;
+            height: 95px;
+            width: 50px;
+            text-align: center;
+            transform-origin: bottom center;
+            display: inline-block;
+        }
+
+        #circle:hover span {
+            animation: animate__heartBeat 1s infinite;
+        }
+
+        #circle:hover i {
+            animation: animate__pulse 1s infinite;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <button id="circle" class="d-flex justify-content-center align-items-center rounded-pill text-white"
+            style="width: 239px; height: 239px; border-radius: 85px; background-color: #110059; color: #ffffff;">
+            todos los cursos  todos los cursos
+        </button>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var circleArray = circle.textContent.split('');
+        circle.textContent = '';
+
+        for (var i = 0; i < circleArray.length; i++) {
+            circle.innerHTML += '<span class="animate__animated animate__heartBeat" style="transform:rotate(' + ((i + 4) * 10) + 'deg);">' + circleArray[i] + '</span>';
+        }
+
+        circle.innerHTML += '<i class="fa-solid fa-plus animate__animated animate__pulse" style="font-size: 35px; position: absolute; border-radius: 50%; background-color: #110059; border: 7px solid #ffffff; color: #ffffff; padding: 5px; margin-left: 2px"></i>';
+    </script>
+</body>
+
+</html>

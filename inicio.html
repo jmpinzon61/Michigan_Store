@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="imagenes\favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Champ:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="templates\css\styles.css">
+</head>
+
+<body class="bg-main-purple">
+    <!-- Navbar -->
+    <header class="container d-flex justify-content-between align-items-center py-3"
+        style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px;">
+        <h1 class="fs-6 champ-bold" style="margin-top: -35px;">Michigan's Store</h1>
+        <!-- Nav in PC-->
+        <div class="d-none d-block d-lg-block">
+            <nav class="d-flex justify-content-between align-items-center"
+                style="max-width: 100%; margin-right: 560px; margin-top: -30px;">
+                <a href="inicio.html" class="text-white mx-3 poppins-bold">Inicio</a>
+                <a href="cursos.html" class="text-white mx-3 poppins-bold">Cursos</a>
+                <a href="precios.html" class="text-white mx-3 poppins-bold">Precios</a>
+                <a href="nosotros.html" class="text-white mx-3 poppins-bold">Nosotros</a>
+                <a href="blogs.html" class="text-white mx-3 poppins-bold">Blogs</a>
+            </nav>
+        </div>
+        <!-- Nav in Movil-->
+        <div class="d-block d-lg-none mx-auto" style="width: 5%; margin-top: -280px;">
+            <nav class="d-flex justify-content-center align-items-center overflow-x-auto"
+                style="white-space: nowrap; width: 270px; margin-top: 300px; margin-left: -145px;">
+
+                <a href="#" class="text-white mx-1 poppins-bold">Inicio</a>
+                <a href="#" class="text-white mx-1 poppins-bold">Cursos</a>
+                <a href="#" class="text-white mx-1 poppins-bold">Precios</a>
+                <a href="#" class="text-white mx-1 poppins-bold">Nosotros</a>
+                <a href="#" class="text-white mx-1 poppins-bold">Blogs</a>
+            </nav>
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="dropdown d-flex align-items-center" style="margin-top: -33px;">
+                <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a>
+                    </li>
+                    <li><a class="dropdown-item text-white poppins-light" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-white poppins-light" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a>
+                    </li>
+                </ul>
+                <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+                    style="height: 40px; width: 40px;">
+                    <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
+                        style="cursor: pointer; background-color: #a19aac; display: flex; padding: 8px; border-radius: 25px;"></i>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item text-white poppins-light mb-2" href=""
+                                style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="d-block d-lg-none">
+            <div class="dropdown d-flex align-items-center" style="margin-top: -50px;">
+                <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a>
+                    </li>
+                    <li><a class="dropdown-item text-white poppins-light" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-white poppins-light" href="#"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a>
+                    </li>
+                </ul>
+                <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+                    style="height: 40px; width: 40px;">
+                    <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
+                        style="cursor: pointer; background-color: #a19aac; display: flex; padding: 8px; border-radius: 25px;"></i>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item text-white poppins-light mb-2" href=""
+                                style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="width: 100%;">
+        <!-- Helcome Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="champ-bold">Conoce el mundo mientras</h1>
+                <h1 class="champ-bold">aprendes <img src="svg\Union.svg"
+                        style="vertical-align: middle; width: auto; height: 7rem;" alt="Ingles"></h1>
+                <div class="d-flex justify-content-center align-items-center"
+                    style="height: 100vh; margin-top: 200px; margin-left: -105px;">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 695px; margin-left: 140px;">
+                            <img src="imagenes\Products Explorers.png" class="card-img-top mt-2" style="height: 885px;"
+                                alt="Carta 1">
+                            <!-- <div class="card-body">
+                            <h5 class="card-title">Carta 1</h5>
+                            <p class="card-text">Descripción de la carta 1.</p>
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 575px; height: 950px; position: relative; z-index: 1000px;">
+                            <img src="imagenes\Products UpColors.png" class="card-img-top" style="margin-top: -60px;"
+                                alt="Carta 2">
+                            <!-- <div class="card-body">
+                            <h5 class="card-title">Carta 2</h5>
+                            <p class="card-text">Descripción de la carta 2.</p>
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 695px; margin-left: -285px;">
+                            <img src="imagenes\Products Prismatic.png" class="card-img-top mt-2" style="height: 885px;"
+                                alt="Carta 3">
+                            <!-- <div class="card-body">
+                            <h5 class="card-title">Carta 3</h5>
+                            <p class="card-text">Descripción de la carta 3.</p>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-container" style="transform: translateY(60px)">
+                <div class="banner-text">
+                    <h1 style="margin-left: 125px;">Get ready to have a <span
+                            style="background: linear-gradient(90deg, #4EB4FF, #FFFFFF, #FAC99F); -webkit-background-clip: text; color: transparent;">
+                            great time!</span></h1>
+                    <p style="width: 565px;">¡Conoce Michigan´s Store en un minuto!</p>
+                </div>
+                <div class="center" style="transform: translateX(-115px); position: relative; z-index: 999px">
+                    <button id="circle" class="d-flex justify-content-center align-items-center rounded-pill text-white"
+                        style="margin-right: 65px; margin-top: -150px; width: 209px; height: 209px; border-radius: 85px; background-color: #110059; color: #ffffff; border: none;">
+                        todos los cursos todos los cursos
+                    </button>
+                </div>
+                <div class="banner-image"
+                    style="height: 400px; width: 950px; margin-top: 60spx; margin-left: -312px; transform: translateX(50px);">
+                    <img src="imagenes\seccion_2.png" alt="Michigan´s Store">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cursos Section -->
+        <section class="course-section">
+            <div class="container text-center">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="row">
+                        <div class="col-5">
+                            <img style="width: 355px; height: 470px;margin-top: -48px; margin-right: -160px; position: relative; z-index: 999px;"
+                                src="imagenes\Vector (3).png" alt="Figura 1">
+                            <img style="position: relative; z-index: 1200px; width: 385px; height: 385px; top: -385px;  transform: translateX(95px);"
+                                src="imagenes\Group 36653.png" alt="Person 1">
+                        </div>
+                        <div class="col-5">
+                            <img style="margin-top: 215px; width: 670.10px;  height: 308.79px; margin-left: 75px; transform: rotate(-10deg)"
+                                src="svg\Curvatura.svg" alt="Union 1">
+                        </div>
+                        <div class="col-5">
+                            <img style="margin-top: -392px; width: 670.10px; height: 308.79px; margin-left: -15px; transform: rotate(-10deg)"
+                                src="svg\Curvatura2.svg" alt="Union 2">
+                        </div>
+                        <div class="card card-custom">
+                            <div class="card-body">
+                                <h5 class="champ-bold" style="font-size: 25px; margin-top: 95px;">Aprende a tu ritmo
+                                </h5>
+                                <img src="imagenes\conoce_mas.png"
+                                    style="position: absolute; top: -75px; margin-left: 235px; height: 155px; width: 155px;"
+                                    alt="Card">
+                                <img src="imagenes\06.png"
+                                    style="position: absolute; top: -80px; margin-left: -85px; height: 155px; width:155px;"
+                                    alt="Card">
+                                <p class="card-text poppins-light"
+                                    style="padding: 80px; margin-left: 10px; margin-top: -75px;">
+                                    Disfruta aprendiendo desde cualquier lugar
+                                    del mundo, sin horarios y a tu ritmo, tú
+                                    decides cuándo seguir con el siguiente tema.</p>
+                            </div>
+                        </div>
+                        <div class="card card-custom_2">
+                            <div class="card-body">
+                                <h5 class="champ-bold" style="font-size: 25px; margin-top: 75px;">Personas como tú,
+                                    cuentan lo que han logrando estudiando en Michigan´s Store</h5>
+                                <p class="card-text poppins-light"
+                                    style="padding: 15px; margin-left: 10px; margin-top: -15px; font-size: 15px;">
+                                    Conoce como nuestros estudiantes crecen, crean
+                                    conexiones profesionales y usan la educación digital
+                                    a su favor, logrando cosas que sin ingles hubiera sido
+                                    imposible conseguir, <span style="font-size: 20px">¡Estas son sus hostorias!.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex grid gap-0 column-gap-4"
+                            style="position: relative; margin-top: -172px; left: 505px;">
+                            <div class="card card-custom_3">
+                                <div class="card-body">
+                                    <img src="imagenes\Person_1.png"
+                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                        alt="Person 1">
+                                    <img src="imagenes\_1.png"
+                                        style="position: relative; margin-top: -125px; left: 7px; height: 70px; width: 70px;"
+                                        alt="Play 1">
+                                </div>
+                            </div>
+                            <div class="card card-custom_4">
+                                <div class="card-body">
+                                    <img src="imagenes\Person_2.png"
+                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                        alt="Person 2">
+                                    <img src="imagenes\_2.png"
+                                        style="position: relative; margin-top: -125px; left: -8px; height: 70px; width: 70px;"
+                                        alt="Play 2">
+                                </div>
+                            </div>
+                            <div class="card card-custom_5">
+                                <div class="card-body">
+                                    <img src="imagenes\Person_3.png"
+                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                        alt="Person 3">
+                                    <img src="imagenes\_3.png"
+                                        style="position: relative; margin-top: -125px; left: 9px; height: 70px; width: 70px;"
+                                        alt="Play 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center grid gap-0 column-gap-4"
+                    style="margin-top: 105px; margin-left: -225px;">
+                    <div class="card card-course_1">
+                        <div class="card-body rounded rounded-2 p-0">
+                            <img src="imagenes/C1.png"
+                                style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
+                                alt="Card-course_1">
+                            <img src="imagenes\name_1.png"
+                                style="position: relative; margin-top: -125px; left: 7px; height: 75px; width: 190px;"
+                                alt="Name_1">
+                        </div>
+                    </div>
+                    <div class="card card-course_2">
+                        <div class="card-body rounded rounded-2 p-0">
+                            <img src="imagenes/C2.png" style="width: 220px; height: 384px; margin-left: -2px;"
+                                alt="Card-course_2">
+                            <img src="imagenes\name_2.png"
+                                style="position: relative; margin-top: -117px; left: 0px; height: 75px; width: 190px;"
+                                alt="Name_2">
+                        </div>
+                    </div>
+                    <div class="card card-course_3">
+                        <div class="card-body rounded rounded-2 p-0">
+                            <img src="imagenes/C3.png" style="width: 220px; height: 384px; margin-left: -2px;"
+                                alt="Card-course_3">
+                            <img src="imagenes\name_3.png"
+                                style="position: relative; margin-top: -117px; left: 0px; height: 130px; width: 200px;"
+                                alt="Name_3">
+                        </div>
+                    </div>
+                    <div class="card card-course_4">
+                        <div class="card-body rounded rounded-2 p-0">
+                            <img src="imagenes/C4.png"
+                                style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
+                                alt="Card-course_4">
+                            <img src="imagenes\name_4.png"
+                                style="position: relative; margin-top: -150px; left: 0px; height: 205px; width: 210px;"
+                                alt="Name_4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes Section -->
+        <section class="plan-section">
+            <div class="container text-center">
+                <button class="btn btn-custom poppins-light"
+                    style="height: 50px; width: 330px; margin-top: 65px; transform: translateY(-20px);">Ver
+                    todos los planes</button>
+                <div class="d-flex content flex-column" style="max-height: 100vh; width: 890px; border-radius: 45px;">
+                    <div class="row" style="margin-left: -35px;">
+                        <div class="d-none d-lg-flex">
+                            <section class="rounded rounded-5 p-0 col-md-6 gradient-section"
+                                style="margin-right: 0px; width: 225px; height: 470px;border-radius: 45px; margin-left: 15px;">
+                                <img src="imagenes\Frame 1000001569.png" alt="UpColors"
+                                    style="width: 100%; height: 100%; object-fit:cover; border-radius: inherit">
+                            </section>
+                            <section class="rounded rounded-5 p-2 col-md-6 gradient-section"
+                                style="margin-right: 25px; width: 420px; height: 470px;">
+                                <div class="row">
+                                    <div class="col text-start">
+                                        <h2 class="champ-bold text-white ms-4"
+                                            style="margin-top: 15px; font-size: xx-large;">
+                                            UpColors
+                                        </h2>
+                                        <p class="poppins-light"
+                                            style="min-height: 100px; font-size: 12px; margin-left: 27px; width: 365px;">
+                                            Con un enfoque comunicativo
+                                            clave,
+                                            este programa explora la comunicación contextualizada en
+                                            situaciones
+                                            reales. Introduciendo temas de fonética básica. Las 40 sesiones de video
+                                            divididas en 4
+                                            módulos
+                                            construyen habilidades esenciales de comunicación.</p>
+                                        <div style="margin-top: -8px; margin-left: -8px;">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <h3 class="fs-6 champ-semibold"
+                                                        style="margin-left: 60px;  transform: translateY(-5px);">Full
+                                                        <span class="bi bi-patch-check-fill"
+                                                            style="color: #00cdff; background: white; border-radius: 50%; font-size: 20px; width: 15px; height: 15px; display: inline-flex; align-items: center; justify-content: center;"></span>
+                                                    </h3>
+                                                    <ol>
+                                                        <p class="fas fa-check"
+                                                            style="font-size: 12px; color: #04baff; transform: translateY(-15px);">
+                                                            <span class="poppins-light text-white"
+                                                                style="font-size: 12px; margin-left: 5px;  transform: translateY(-20px);">Acceso
+                                                                a
+                                                                los 4 módulos</span>
+                                                        </p><br>
+                                                        <p class="fas fa-check"
+                                                            style="font-size: 12px; color: #04baff; transform: translateY(-20px);">
+                                                            <span class="poppins-light text-white"
+                                                                style="font-size: 12px; margin-left: 5px; transform: translateY(-20px);">¡Ve
+                                                                a tu
+                                                                ritmo!, visualiza upColors en el tiempo que mejor se
+                                                                adapte a tu
+                                                                aprendizaje.</span>
+                                                        </p><br>
+                                                        <p class="fas fa-check"
+                                                            style="font-size: 12px; color: #04baff; transform: translateY(-30px);">
+                                                            <span class="poppins-light text-white"
+                                                                style="font-size: 12px; margin-left: 5px;  transform: translateY(-30px);">4
+                                                                sesiones
+                                                                en vivo.</span>
+                                                        </p><br>
+                                                        <p class="fas fa-check"
+                                                            style="font-size: 12px; color: #04baff; transform: translateY(-40px);">
+                                                            <span class="poppins-light text-white"
+                                                                style="font-size: 12px; margin-left: 5px;  transform: translateY(-40px);">Recibe
+                                                                certificación de curso.</span>
+                                                        </p>
+                                                    </ol>
+                                                </div>
+                                                <div class="col-5 mt-4">
+                                                    <div class="text-center"
+                                                        style="margin-left: 10px; margin-top: -10px;">
+                                                        <span class="champ-bold text-wrap"
+                                                            style="max-height: 185px; font-size: 35px;">
+                                                            <span style="margin-left: -50px;"></span>37.
+                                                            <span
+                                                                style="display: flex; flex-direction: column; align-items: center">
+                                                                <sup
+                                                                    style="margin-left: 20px; margin-top: -20px;font-size: 25px;">80
+                                                                    <p style="margin-left: 45px;">$</p>
+                                                                </sup>
+                                                                <p
+                                                                    style="font-size: 15px; margin-left: 44px; margin-top: -20px;">
+                                                                    USD</p>
+                                                                <!-- <sub>USD</sub> -->
+                                                            </span>
+                                                        </span>
+                                                        <button
+                                                            class="button-purple rounded-pill px-4 py-1 champ-semibold text-center bi-cart-plus"
+                                                            style="transform: translateY(-10px); width: 135px; height: 45px; margin-top: -50px; margin-left: -6px;border: none; z-index: 10px; position: relative;">
+                                                            comprar</button>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex"
+                                                    style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 370px; transform: translateY(-65px)">
+                                                </div>
+                                            </div>
+                                            <div class="d-inline">
+                                                <div class="row" style="margin-top: -68px">
+                                                    <div class="col d-flex align-items-center grid gap-0 row-gap-2"
+                                                        style="font-size: 0.8rem; margin-bottom: -19px;">
+                                                        <p class="fas fa-circle"
+                                                            style="font-size: 7px; color: #00cdff; margin-left: 33px;">
+                                                        </p>
+                                                        <p class="poppins-light p-0"
+                                                            style="margin-left: 4px; font-size: 11px; transform: translateX(4px);">
+                                                            Modulo 1</p>
+                                                        <p class="poppins-light p-2"
+                                                            style="margin-left: 45px; font-size: 11px;">12
+                                                            Temas</p>
+                                                        <p class="poppins-light p-2"
+                                                            style="margin-left: 45px; font-size: 11px;">
+                                                            8.10 $</p>
+                                                        <div class="d-flex ms-auto" style="margin-left: -2px;">
+                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                style="margin-top: -4px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                comprar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="margin-top: 2px">
+                                                    <div class="col d-flex align-items-center  grid gap-0 row-gap-2"
+                                                        style="font-size: 0.8rem; margin-bottom: -19px;">
+                                                        <p class="fas fa-circle"
+                                                            style="font-size: 7px; color: #00cdff; margin-left: 33px;">
+                                                        </p>
+                                                        <p class="poppins-light p-0"
+                                                            style="margin-left: 4px; font-size: 11px; transform: translateX(4px);">
+                                                            Modulo 2</p>
+                                                        <p class="poppins-light p-1"
+                                                            style="margin-left: 45px; font-size: 11px;">12
+                                                            Temas</p>
+                                                        <p class="poppins-light p-2"
+                                                            style="margin-left: 50px; font-size: 11px;">
+                                                            8.10 $</p>
+                                                        <div class="d-flex ms-auto" style="margin-left: -2px;">
+                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                comprar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col d-flex align-items-center grid gap-0 row-gap-2"
+                                                        style="font-size: 0.8rem; margin-bottom: -19px;">
+                                                        <p class="fas fa-circle"
+                                                            style="font-size: 7px; color: #00cdff; margin-left: 33px;">
+                                                        </p>
+                                                        <p class="poppins-light p-0"
+                                                            style="margin-left: 4px; font-size: 11px;transform: translateX(4px);">
+                                                            Modulo 3</p>
+                                                        <p class="poppins-light p-1"
+                                                            style="margin-left: 45px; font-size: 11px;">7
+                                                            Temas</p>
+                                                        <p class="poppins-light p-2"
+                                                            style="margin-left: 54px; font-size: 11px;">
+                                                            10.8 $</p>
+                                                        <div class="d-flex ms-auto" style="margin-right: -2px;">
+                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                comprar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col d-flex align-items-center grid gap-0 row-gap-2"
+                                                        style="font-size: 0.8rem; margin-bottom: -19px;">
+                                                        <p class="fas fa-circle"
+                                                            style="font-size: 7px; color: #00cdff; margin-left: 33px;">
+                                                        </p>
+                                                        <p class="poppins-light p-0"
+                                                            style="margin-left: 4px; font-size: 11px;transform: translateX(4px);">
+                                                            Modulo 4</p>
+                                                        <p class="poppins-light p-1"
+                                                            style="margin-left: 45px; font-size: 11px">9
+                                                            Temas</p>
+                                                        <p class="poppins-light p-2"
+                                                            style="margin-left: 54px; font-size: 11px">
+                                                            10.8 $</p>
+                                                        <div class="d-flex ms-auto" style="margin-right: -2px;">
+                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                comprar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-start px-4 py-2" style="margin-left: -105px;">
+
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="rounded rounded-4 p-4 col-md-4"
+                                style="background-color: #4a03a5; height: 370px; width: 360px">
+                                <h2 class="champ-bold text-white">
+                                    <span style="font-size: xx-large; margin-left: -139px;">Subscrición</span><br>
+                                    <span style="font-size: xx-large; margin-left: -192px;">mensual</span>
+                                </h2>
+                                <div class="poppins-light"
+                                    style="margin-top: 20px; font-size: 12px; width: 299px;margin-left: -20px;">
+                                    <p class="poppins-light"
+                                        style="min-height: 85px; font-size: 12px; width: 299px; margin-left: 8px;">
+                                        <span style="margin-left: 4px;">Con tu membresia, accede libremente a todo
+                                            el</span>
+                                        <span style="margin-left: -4px;">contenido que UpGrade tiene para ti,
+                                            además</span>
+                                        <span style="margin-left: 4px;">recibe beneficios exclusivos por 30 días.</span>
+                                    </p>
+                                </div>
+                                <div class="d-flex col-7 ms-1" style="margin-top: -40px">
+                                    <ol class="px-0 text-white" style="margin-left: -50px;">
+                                        <p class="fas fa-check "
+                                            style="list-style: none; padding: 0; margin: 0; color: #7769f2;">
+                                            <span class="poppins-light text-white" style="font-size: 0.8rem;">Beneficio
+                                                exclusivo
+                                                1</span>
+                                        </p>
+                                        <p class="fas fa-check"
+                                            style="list-style: none; padding: 0; margin: 0;  color: #7769f2;">
+                                            <span class="poppins-light text-white" style="font-size: 0.8rem;">Beneficio
+                                                exclusivo
+                                                2</span>
+                                        </p>
+                                        <p class="fas fa-check"
+                                            style="list-style: none; padding: 0; margin: 0;  color: #7769f2;">
+                                            <span class="poppins-light text-white" style="font-size: 0.8rem;">Beneficio
+                                                exclusivo
+                                                3</span>
+                                        </p>
+                                        <p class="fas fa-check"
+                                            style="list-style: none; padding: 0; margin: 0; color: #7769f2;">
+                                            <span class="poppins-light text-white" style="font-size: 0.8rem;">Beneficio
+                                                exclusivo
+                                                4</span>
+                                        </p>
+                                    </ol>
+                                </div>
+                                <div class="text-center" style="margin-left: -220px; margin-top: -25px;">
+                                    <span class="champ-bold text-wrap" style="max-height: 185px; font-size: 75px;">
+                                        <span></span>21.
+                                        <span style="display: flex; flex-direction: column; align-items: center;">
+                                            <sup style="margin-left: 109px; margin-top: -49px;font-size: 40px;">60<p
+                                                    style="margin-left: 70px;">$</p></sup>
+                                            <p style="font-size: 20px; margin-left: 153px; margin-top: -20px;">USD
+                                            </p>
+                                            <!-- <sub>USD</sub> -->
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <button class="btn rounded-pill py-2 text-white fs-6 poppins-light bi-cart-plus"
+                                        style="background-color: #7955f8; border-radius: 150px; width: 130px; margin-top: -115px; margin-left: 180px">
+                                        comprar</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-custom_2 mt-4" style="height: 50px; width: 330px">Ver todos los planes</button>
+            </div>
+            <div class="d-flex justify-content-center grid gap-0 column-gap-4"
+                style="margin-top: 810px; margin-left: -225px;">
+                <div class="card course_coming">
+                    <div class="card-body">
+                        <div class="d-flex flex-row justify-content-center text-center ">
+                            <div class="col" style="max-width: 185px; margin-left: 70px;">
+                                <h1 class="poppins-light" style="font-size: 15px;">Elegir
+                                    <span class="champ-bold">
+                                        Michigan´s Store
+                                    </span>
+                                    no es solo una opción,
+                                    <span class="champ-bold">
+                                        es una experiencia
+                                    </span>
+                                </h1>
+                                <p class="poppins-light ms-2" style="font-size: 10px; max-width: 160px; color: #FFB17F">
+                                    Inicia ahora y obtén un 20% off en el primer plan que elijas.</p>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-coming mt-4 poppins-light"
+                                    style="height: 40px; width: 199.5px; line-height: 5px; transform: translateX(150px);">comenzar
+                                    ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes Section -->
+        <section class="faq-section">
+            <div class="container text-center" style="margin-top: 85px">
+                <div class="d-flex flex-row justify-content-center text-center">
+                    <div class="col-4" style="transform: translateX(-105px)">
+                        <div class="d-flex"
+                            style="border-bottom: 2px solid #ffffff; margin-left: 40px; width: 100px; transform: translateY(-15px)">
+                        </div>
+                        <span class="poppins-light text-start" style="margin-left: -135px; font-size: 25px">Preguntas</span>
+                        <p class="poppins-light text-start" style="margin-left: 39px; font-size: 25px; transform: translateY(-8px)">Frecuentes</p>
+                        <p class="text-start" style="width: 305px; margin-left: 42px; transform: translateY(-15px);">I will help wou with finding a solution and solve your problem.</p>
+                        <button class="btn btn-custom_2 mt-n2 poppins-light" style="height: 40px; width: 295px; line-height: 5px; transform: translateY(-8px); margin-left: 42px">
+                            dejar una pregunta
+                        </button>
+                    </div>
+                    <div class="col-6" style="transform: translateX(35px)">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq1">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">01</strong>¿Qué es UpGrade?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light text-start" style="color: #ffffff">
+                                        Nuestro concepto de marca gira en torno a la idea de un lugar donde el poder
+                                        transformador
+                                        de las experiencias inmersivas ayuda a mejorar las habilidades de comunicación
+                                        en inglés.
+                                        Estamos dedicados a cultivar ciudadanos globales que posean la confianza para
+                                        conectarse,
+                                        colaborar y tener éxito en el mundo interconectado de hoy.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">02</strong>¿Cómo funciona el
+                                            programa?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light" style="color: #ffffff">
+                                        Fometamos la inmersión en el idioma a través de la exposición
+                                        constante a situaciones y materiales auténticos en ingles.
+                                        Utilizamos una variedad de recursos, como videos, audios,
+                                        artículos y conversaciones reales, para que los estudiantes se
+                                        sumerjan en el idioma y se acostumbren a su uso cotidiano.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq3">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2"
+                                            style="font-weight: normal; color: #2F0277; font-size: 19px">03</strong>¿Qué incluyen
+                                            mis cursos?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light" style="color: #ffffff">
+                                        <ul class="text-start">
+                                            <li>Respectiva cantidad de horas semanales de desarrollo.</li>
+                                            <li>Plataforma Stark de National Geographic Learning.</li>
+                                            <li>Material National Geographic Learning.</li>
+                                            <li>Acceso a Plataforma. AcTime para programación de clases.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq4">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">04</strong>¿Qué voy a
+                                            aprender?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light text-start" style="color: #ffffff">
+                                        No solo las habilidades linguísticas necesarias para comunicarse
+                                        en inglés, sino también desarrollar una compresión más amplia
+                                        de la cultura y la sociedad de habla inglesa, lo que te prepararía
+                                        para tener éxito en un entorno global clases.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq5">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">05</strong>¿Cómo puedo
+                                            suscribirme?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light text-start" style="color: #ffffff">
+                                        Ingresando a nuestra página web, debes ir a la sección de
+                                        planes y escojer el plan de tu preferencia y proceder al pago. si
+                                        quieres asesoría personalizada totalmente gratis, diligencia tus
+                                        datos aquí.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq6">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">06</strong>¿Necesito un
+                                            nivel en el idioma para poder tomar las clases?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq6" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light" style="color: #ffffff">
+                                        No. Contamos con un exelente programa de iniciación llamado
+                                        UpColors en donde podrás construir desde 0 los conocimientos
+                                        neesarios a través de actividades dinámicas que adaptan el
+                                        color como protagonista en el desarrollo de todos los temas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header poppins-light">
+                                    <button class="accordion-button faq-question" data-bs-toggle="collapse"
+                                        data-bs-target="#faq7">
+                                        <span style="color: #ffffff">
+                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">07</strong>¿Cuántos niveles
+                                            Michigan´s Store?
+                                        </span>
+                                        <i class="fas fa-chevron-down" id="icon-faq1"></i>
+                                    </button>
+                                </h2>
+                                <div id="faq7" class="accordion-collapse collapse">
+                                    <div class="accordion-body poppins-light text-start" style="color: #ffffff">
+                                        Puedes encontrar cursos quevan desde el nivel A1 hasta el nivel C1.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section text-center text-light py-5">
+            <div class="container">
+                <div class="d-flex flex-row justify-content-center align-items-center">
+                    <div class="col-2" style="margin-left: 125px;">
+                        <h3 class="champ-bold" style="width: 700px; margin-left: 195px"><span
+                                style="background: linear-gradient(90deg, #F2527D, #EC7958); -webkit-background-clip: text; color: transparent;">¡Regístrate
+                                a nuestro newsletter!</span></h3>
+                        <ol class="text-start" style="width: 410px;">
+                            <p class="fas fa-check" style="font-size: 15px; color: #FF3E62">
+                                <span class="poppins-light text-white" style="font-size: 15px; margin-left: 5px;">Acceso
+                                    a los 4 módulos</span>
+                            </p><br>
+                            <p class="fas fa-check" style="font-size: 15px; color:#FF3E62">
+                                <span class="poppins-light text-white text-start"
+                                    style="font-size: 15px; margin-left: 5px;">¡Ve a tu
+                                    ritmo!, visualiza upColors en el tiempo que mejor se adapte a tu
+                                    aprendizaje.</span>
+                            </p><br>
+                            <p class="fas fa-check" style="font-size: 15px; color:#FF3E62"><span
+                                    class="poppins-light text-white" style="font-size: 15px; margin-left: 5px;">4
+                                    sesiones
+                                    en vivo.</span></p><br>
+                            <p class="fas fa-check" style="font-size: 15px; color:#FF3E62"><span
+                                    class="poppins-light text-white" style="font-size: 15px; margin-left: 5px;">Recibe
+                                    certificación de curso.</span></p>
+                        </ol>
+                    </div>
+                    <div class="col-10">
+                        <form class="d-flex justify-content-center" onsubmit="event.preventDefault()">
+                            <input type="email" class="form-control custom-input poppins-light"
+                                style="font-size: 12px; width: 416px; height: 60px; background: #615D78; border-radius: 45px; border: none; margin-left: 70px; outline: none; color: #ffffff;"
+                                placeholder="¡Ingresa tu correo!">
+                            <button type="submit" class="btn btn-email ms-2 text-white" style="cursor: pointer"
+                                id="toggleButton" data-state="plane">
+                                <i class="fa-solid fa-paper-plane"
+                                    style="font-size: 25px; margin-left: -6px; background: transparent"></i>
+                                <i class="fa-solid fa-check icon-clicked"
+                                    style="font-size: 25px; margin-left: -6px;color: #04011D !important;"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer PC-->
+    <div class="d-none d-block d-lg-block" style="margin-top: 195px;">
+        <footer class="gradient-customs text-white p-4 col-md-4 p-md-5 text-center mx-auto"
+            style="width: 1345px; height: 150px;">
+            <div class="d-flex justify-content-center  text-center row">
+                <div class="col" style="margin-left: 35px;">
+                    <h2 class="fs-2 champ-bold">Michigan's Store</h2>
+                    <p class="mt-2 poppins-light">Apreder inglés nunca fue tan fácil</p>
+                </div>
+                <div class="col me-4">
+                    <a href="https://www.facebook.com/michiganmaster" class="fa-brands fa-facebook-f mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 60px; text-align: center; display: inline-block;"></a>
+                    <a href="https://www.instagram.com/michiganmastersas/" class="fa-brands fa-instagram mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                    <a href="https://tiktok.com/@michiganmasterco" class="fa-brands fa-tiktok mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                    <a href="https://wa.me/+573228532254" class="fa-brands fa-whatsapp mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                </div>
+                <div class="col">
+                    <p class="poppins-light" style="font-size: 15px;color: #a9aeeb; margin-left: -50px;">Privacity
+                        Policy - Terms & Agreements
+                    <p class="poppins-light"
+                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2024 Michigan´s
+                        Store</p>
+                    <p class="poppins-light"
+                        style="font-size: 15px; color: #a9aeeb; margin-top: -15px; margin-left: -2px;">Todos los
+                        derechos reservados</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer Movil-->
+    <div class="d-block d-lg-none">
+        <footer class="d-flex gradient-custom text-white p-4 p-md-5 text-center mx-auto flex-wrap"
+            style="max-width: 295px; height: 320px; margin-top: 95px;">
+            <div class="container p-2" style="margin-top: 5px;">
+                <h2 class="fs-2 champ-bold">Michigan's Store</h2>
+                <p class="mt-2 poppins-light">Aprender inglés nunca fue tan fácil</p>
+                <div class="d-flex justify-content-center mt-4 flex-wrap">
+                    <i class="fa-brands fa-facebook mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-instagram mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-tiktok mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-whatsapp mx-2" style="font-size: 30px;"></i>
+                </div>
+                <p class="mx-auto mt-2" style="border-bottom: 1px solid #ffffff; max-width: 75%;"></p>
+                <div class="mt-2">
+                    <p class="poppins-light" style="color: #a9aeeb;">Privacity Policy - Terms & Agreements</p>
+                </div>
+                <p class="mt-n2 poppins-light" style="font-size: 11px; color: #a9aeeb;">©2024 UpGrade | Todos los
+                    derechos reservados
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="templates/js/rotate.js"></script>
+    <script src="templates/js/check.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Mike</title>
+    <link rel="stylesheet" href="./templates/css/styles.css">
+</head>
+<body>
+    <div class="d-flex flex-column" id="chatbox-close">
+        <div class="col" style="margin-bottom: 10px; margin-left: 20px">
+            <div class="chatbot-header" onclick="toggleChatbot()">
+                <span>Chatbot Mike</span>
+                <button id="minimize-btn"><img src="./imagenes/Minimize.png"
+                        style="height: 10px; width:26px; margin-left: -65px; margin-top: -7px" alt="Chat"></button>
+                <button id="close-btn"><img src="./imagenes/Close.png" alt="Close Chat"></button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="chatbox" id="chatbot-body">
+                <!-- Chat Body -->
+                <div class="chatbox-body">
+                    <img class="fixed-bottom" src="" alt="">
+                </div>
+                <!-- Footer -->
+                <div class="chatbox-footer d-flex align-items-center mx-2" style="box-shadow: none !important">
+                    <input type="text" class="form-control" style="box-shadow: none !important"
+                        placeholder="Type your message..." id="user-input" />
+                    <button class="btn btn-chatbox" style="border: none !important; margin-left: 180px" id="send-btn">
+                        <img src="./svg/Airplane.svg" style="margin-left: -2px" alt="plane">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./templates/js/disguise.js"></script>
+</body>
+
+</html>
