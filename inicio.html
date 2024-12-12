@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,16 +20,17 @@
     <!-- Navbar -->
     <header class="container d-flex justify-content-between align-items-center py-3"
         style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px;">
-        <h1 class="fs-6 champ-bold" style="margin-top: -35px;">Michigan's Store</h1>
+        <h1 class="fs-5 champ-bold" style="margin: 0 0 0 -2px;margin-top: -45px">Michigan's</h1>
+        <h1 class="fs-5 champ-bold" style="margin: 0 0 0 -150px;">Store</h1>
         <!-- Nav in PC-->
         <div class="d-none d-block d-lg-block">
             <nav class="d-flex justify-content-between align-items-center"
-                style="max-width: 100%; margin-right: 560px; margin-top: -30px;">
-                <a href="inicio.html" class="text-white mx-3 poppins-bold">Inicio</a>
-                <a href="cursos.html" class="text-white mx-3 poppins-bold">Cursos</a>
-                <a href="precios.html" class="text-white mx-3 poppins-bold">Precios</a>
-                <a href="nosotros.html" class="text-white mx-3 poppins-bold">Nosotros</a>
-                <a href="blogs.html" class="text-white mx-3 poppins-bold">Blogs</a>
+                style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
+                <a href="inicio.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Inicio</a>
+                <a href="cursos.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Cursos</a>
+                <a href="precios.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Precios</a>
+                <a href="nosotros.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Nosotros</a>
+                <a href="blogs.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Blogs</a>
             </nav>
         </div>
         <!-- Nav in Movil-->
@@ -106,43 +108,32 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container" style="width: 100%;">
+    <main class="container-fluid my-5">
         <!-- Helcome Section -->
         <section class="hero-section">
-            <div class="container">
+            <div class="container position-relative">
                 <h1 class="champ-bold">Conoce el mundo mientras</h1>
-                <h1 class="champ-bold">aprendes <img src="svg\Union.svg"
+                <h1 class="champ-bold">aprendes <img src="svg/Union.svg"
                         style="vertical-align: middle; width: auto; height: 7rem;" alt="Ingles"></h1>
                 <div class="d-flex justify-content-center align-items-center"
-                    style="height: 100vh; margin-top: 200px; margin-left: -105px;">
+                    style="height: 100vh; margin-top: 50px; margin-left: -105px;">
                     <div class="col-md-4">
-                        <div class="card" style="width: 695px; margin-left: 140px;">
-                            <img src="imagenes\Products Explorers.png" class="card-img-top mt-2" style="height: 885px;"
-                                alt="Carta 1">
-                            <!-- <div class="card-body">
-                            <h5 class="card-title">Carta 1</h5>
-                            <p class="card-text">Descripción de la carta 1.</p>
-                        </div> -->
+                        <div class="card-home" style="width: 695px; margin-left: 140px;">
+                            <img src="imagenes/Products Explorers.png" class="card-img-top"
+                                style="height: 885px; margin-top: 232px; position: relative; z-index: 1" alt="Carta 1">
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="width: 575px; height: 950px; position: relative; z-index: 1000px;">
-                            <img src="imagenes\Products UpColors.png" class="card-img-top" style="margin-top: -60px;"
-                                alt="Carta 2">
-                            <!-- <div class="card-body">
-                            <h5 class="card-title">Carta 2</h5>
-                            <p class="card-text">Descripción de la carta 2.</p>
-                        </div> -->
+                        <div class="card-home"
+                            style="width: 575px; height: 950px; position: relative; z-index: 1000px;">
+                            <img src="imagenes/Products UpColors.png" class="card-img-top"
+                                style="margin-top: 60px;  position: relative; z-index: 2" alt="Carta 2">
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card" style="width: 695px; margin-left: -285px;">
-                            <img src="imagenes\Products Prismatic.png" class="card-img-top mt-2" style="height: 885px;"
-                                alt="Carta 3">
-                            <!-- <div class="card-body">
-                            <h5 class="card-title">Carta 3</h5>
-                            <p class="card-text">Descripción de la carta 3.</p>
-                        </div> -->
+                        <div class="card-home" style="width: 695px; margin-left: -285px;">
+                            <img src="imagenes/Products Prismatic.png" class="card-img-top"
+                                style="height: 885px; margin-top: 232px;  position: relative; z-index: 3" alt="Carta 3">
                         </div>
                     </div>
                 </div>
@@ -154,15 +145,15 @@
                             great time!</span></h1>
                     <p style="width: 565px;">¡Conoce Michigan´s Store en un minuto!</p>
                 </div>
-                <div class="center" style="transform: translateX(-115px); position: relative; z-index: 999px">
+                <div class="center" style="margin-left: -50px; position: relative; z-index: 999px">
                     <button id="circle" class="d-flex justify-content-center align-items-center rounded-pill text-white"
                         style="margin-right: 65px; margin-top: -150px; width: 209px; height: 209px; border-radius: 85px; background-color: #110059; color: #ffffff; border: none;">
                         todos los cursos todos los cursos
                     </button>
                 </div>
                 <div class="banner-image"
-                    style="height: 400px; width: 950px; margin-top: 60spx; margin-left: -312px; transform: translateX(50px);">
-                    <img src="imagenes\seccion_2.png" alt="Michigan´s Store">
+                    style="height: 400px; width: 950px; margin-top: -10px; margin-left: -135px; transform: translateX(80px);">
+                    <img src="imagenes/seccion_2.png" alt="Michigan´s Store">
                 </div>
             </div>
         </section>
@@ -174,26 +165,26 @@
                     <div class="row">
                         <div class="col-5">
                             <img style="width: 355px; height: 470px;margin-top: -48px; margin-right: -160px; position: relative; z-index: 999px;"
-                                src="imagenes\Vector (3).png" alt="Figura 1">
+                                src="imagenes/Vector (3).png" alt="Figura 1">
                             <img style="position: relative; z-index: 1200px; width: 385px; height: 385px; top: -385px;  transform: translateX(95px);"
-                                src="imagenes\Group 36653.png" alt="Person 1">
+                                src="imagenes/Group 36653.png" alt="Person 1">
+                        </div>
+                        <div class="col-6">
+                            <img style="margin-top: 180px; width: 750px;  height: 408.90px; margin-left: 90px; transform: rotate(-10deg)"
+                                src="svg/Curvatura.svg" alt="Union 1">
                         </div>
                         <div class="col-5">
-                            <img style="margin-top: 215px; width: 670.10px;  height: 308.79px; margin-left: 75px; transform: rotate(-10deg)"
-                                src="svg\Curvatura.svg" alt="Union 1">
+                            <img style="margin-top: -392px; width: 780px; height: 408.79px; margin-left: -105px; transform: rotate(-10deg)"
+                                src="svg/Curvatura2.svg" alt="Union 2">
                         </div>
-                        <div class="col-5">
-                            <img style="margin-top: -392px; width: 670.10px; height: 308.79px; margin-left: -15px; transform: rotate(-10deg)"
-                                src="svg\Curvatura2.svg" alt="Union 2">
-                        </div>
-                        <div class="card card-custom">
+                        <div class="card-home card-custom" style="height: 270px; width: 637px">
                             <div class="card-body">
                                 <h5 class="champ-bold" style="font-size: 25px; margin-top: 95px;">Aprende a tu ritmo
                                 </h5>
-                                <img src="imagenes\conoce_mas.png"
-                                    style="position: absolute; top: -75px; margin-left: 235px; height: 155px; width: 155px;"
+                                <img src="imagenes/conoce_mas.png"
+                                    style="position: absolute; top: -75px; margin-left: 240px; height: 155px; width: 155px;"
                                     alt="Card">
-                                <img src="imagenes\06.png"
+                                <img src="imagenes/06.png"
                                     style="position: absolute; top: -80px; margin-left: -85px; height: 155px; width:155px;"
                                     alt="Card">
                                 <p class="card-text poppins-light"
@@ -203,12 +194,12 @@
                                     decides cuándo seguir con el siguiente tema.</p>
                             </div>
                         </div>
-                        <div class="card card-custom_2">
+                        <div class="card-home card-custom_2">
                             <div class="card-body">
-                                <h5 class="champ-bold" style="font-size: 25px; margin-top: 75px;">Personas como tú,
+                                <h5 class="champ-bold text-start" style="font-size: 25px; margin-top: 75px;">Personas como tú,
                                     cuentan lo que han logrando estudiando en Michigan´s Store</h5>
-                                <p class="card-text poppins-light"
-                                    style="padding: 15px; margin-left: 10px; margin-top: -15px; font-size: 15px;">
+                                <p class="card-text poppins-light text-start"
+                                    style="padding: 15px; margin-left: -15px; margin-top: -15px; font-size: 15px;">
                                     Conoce como nuestros estudiantes crecen, crean
                                     conexiones profesionales y usan la educación digital
                                     a su favor, logrando cosas que sin ingles hubiera sido
@@ -217,33 +208,33 @@
                             </div>
                         </div>
                         <div class="d-flex grid gap-0 column-gap-4"
-                            style="position: relative; margin-top: -172px; left: 505px;">
-                            <div class="card card-custom_3">
+                            style="position: relative; margin-top: -222px; left: 650px;">
+                            <div class="card-custom_3">
                                 <div class="card-body">
-                                    <img src="imagenes\Person_1.png"
-                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                    <img src="imagenes/Person_1.png"
+                                        style="margin-left: 0px; height: 210px; width: 145px; margin-top: 52px;"
                                         alt="Person 1">
-                                    <img src="imagenes\_1.png"
+                                    <img src="imagenes/_1.png"
                                         style="position: relative; margin-top: -125px; left: 7px; height: 70px; width: 70px;"
                                         alt="Play 1">
                                 </div>
                             </div>
-                            <div class="card card-custom_4">
+                            <div class="card-custom_4">
                                 <div class="card-body">
-                                    <img src="imagenes\Person_2.png"
-                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                    <img src="imagenes/Person_2.png"
+                                        style="margin-left: 0px; height: 210px; width: 145px; margin-top: 52px;"
                                         alt="Person 2">
-                                    <img src="imagenes\_2.png"
+                                    <img src="imagenes/_2.png"
                                         style="position: relative; margin-top: -125px; left: -8px; height: 70px; width: 70px;"
                                         alt="Play 2">
                                 </div>
                             </div>
-                            <div class="card card-custom_5">
+                            <div class="card-custom_5">
                                 <div class="card-body">
-                                    <img src="imagenes\Person_3.png"
-                                        style="margin-left: -16px; height: 210px; width: 145px; margin-top: 52px;"
+                                    <img src="imagenes/Person_3.png"
+                                        style="margin-left: 0px; height: 210px; width: 145px; margin-top: 52px;"
                                         alt="Person 3">
-                                    <img src="imagenes\_3.png"
+                                    <img src="imagenes/_3.png"
                                         style="position: relative; margin-top: -125px; left: 9px; height: 70px; width: 70px;"
                                         alt="Play 3">
                                 </div>
@@ -252,41 +243,41 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center grid gap-0 column-gap-4"
-                    style="margin-top: 105px; margin-left: -225px;">
-                    <div class="card card-course_1">
+                    style="margin-top: 165px; margin-left: -225px;">
+                    <div class="card-course_1">
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C1.png"
                                 style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
                                 alt="Card-course_1">
-                            <img src="imagenes\name_1.png"
+                            <img src="imagenes/name_1.png"
                                 style="position: relative; margin-top: -125px; left: 7px; height: 75px; width: 190px;"
                                 alt="Name_1">
                         </div>
                     </div>
-                    <div class="card card-course_2">
+                    <div class="card-course_2">
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C2.png" style="width: 220px; height: 384px; margin-left: -2px;"
                                 alt="Card-course_2">
-                            <img src="imagenes\name_2.png"
+                            <img src="imagenes/name_2.png"
                                 style="position: relative; margin-top: -117px; left: 0px; height: 75px; width: 190px;"
                                 alt="Name_2">
                         </div>
                     </div>
-                    <div class="card card-course_3">
+                    <div class="card-course_3">
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C3.png" style="width: 220px; height: 384px; margin-left: -2px;"
                                 alt="Card-course_3">
-                            <img src="imagenes\name_3.png"
+                            <img src="imagenes/name_3.png"
                                 style="position: relative; margin-top: -117px; left: 0px; height: 130px; width: 200px;"
                                 alt="Name_3">
                         </div>
                     </div>
-                    <div class="card card-course_4">
+                    <div class="card-course_4">
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C4.png"
                                 style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
                                 alt="Card-course_4">
-                            <img src="imagenes\name_4.png"
+                            <img src="imagenes/name_4.png"
                                 style="position: relative; margin-top: -150px; left: 0px; height: 205px; width: 210px;"
                                 alt="Name_4">
                         </div>
@@ -305,8 +296,8 @@
                     <div class="row" style="margin-left: -35px;">
                         <div class="d-none d-lg-flex">
                             <section class="rounded rounded-5 p-0 col-md-6 gradient-section"
-                                style="margin-right: 0px; width: 225px; height: 470px;border-radius: 45px; margin-left: 15px;">
-                                <img src="imagenes\Frame 1000001569.png" alt="UpColors"
+                                style="margin-right: 0px; width: 225px; height: 470px;border-radius: 45px; margin-left: 190px;">
+                                <img src="imagenes/Frame 1000001569.png" alt="UpColors"
                                     style="width: 100%; height: 100%; object-fit:cover; border-radius: inherit">
                             </section>
                             <section class="rounded rounded-5 p-2 col-md-6 gradient-section"
@@ -565,12 +556,12 @@
                 <button class="btn btn-custom_2 mt-4" style="height: 50px; width: 330px">Ver todos los planes</button>
             </div>
             <div class="d-flex justify-content-center grid gap-0 column-gap-4"
-                style="margin-top: 810px; margin-left: -225px;">
-                <div class="card course_coming">
+                style="margin-top: 810px; margin-left: -255px;">
+                <div class="course_coming">
                     <div class="card-body">
                         <div class="d-flex flex-row justify-content-center text-center ">
-                            <div class="col" style="max-width: 185px; margin-left: 70px;">
-                                <h1 class="poppins-light" style="font-size: 15px;">Elegir
+                            <div class="col" style="max-width: 220px; margin-left: 70px; margin-top: 20px">
+                                <h1 class="poppins-light text-start" style="font-size: 18px;">Elegir
                                     <span class="champ-bold">
                                         Michigan´s Store
                                     </span>
@@ -583,7 +574,7 @@
                                     Inicia ahora y obtén un 20% off en el primer plan que elijas.</p>
                             </div>
                             <div class="col">
-                                <button class="btn btn-coming mt-4 poppins-light"
+                                <button class="btn btn-coming poppins-light"
                                     style="height: 40px; width: 199.5px; line-height: 5px; transform: translateX(150px);">comenzar
                                     ahora</button>
                             </div>
@@ -601,10 +592,14 @@
                         <div class="d-flex"
                             style="border-bottom: 2px solid #ffffff; margin-left: 40px; width: 100px; transform: translateY(-15px)">
                         </div>
-                        <span class="poppins-light text-start" style="margin-left: -135px; font-size: 25px">Preguntas</span>
-                        <p class="poppins-light text-start" style="margin-left: 39px; font-size: 25px; transform: translateY(-8px)">Frecuentes</p>
-                        <p class="text-start" style="width: 305px; margin-left: 42px; transform: translateY(-15px);">I will help wou with finding a solution and solve your problem.</p>
-                        <button class="btn btn-custom_2 mt-n2 poppins-light" style="height: 40px; width: 295px; line-height: 5px; transform: translateY(-8px); margin-left: 42px">
+                        <span class="poppins-light text-start"
+                            style="margin-left: -230px; font-size: 25px">Preguntas</span>
+                        <p class="poppins-light text-start"
+                            style="margin-left: 39px; font-size: 25px; transform: translateY(-8px)">Frecuentes</p>
+                        <p class="text-start" style="width: 305px; margin-left: 40px; transform: translateY(-15px);">I
+                            will help wou with finding a solution and solve your problem.</p>
+                        <button class="btn btn-custom_2 mt-n2 poppins-light"
+                            style="height: 40px; width: 295px; line-height: 5px; transform: translateY(-8px); margin-left: -60px">
                             dejar una pregunta
                         </button>
                     </div>
@@ -616,7 +611,8 @@
                                         data-bs-target="#faq1">
                                         <span style="color: #ffffff">
                                             <strong class="mx-2"
-                                                style="font-weight: normal; color: #2F0277; font-size: 19px">01</strong>¿Qué es UpGrade?
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">01</strong>¿Qué
+                                            es UpGrade?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
                                     </button>
@@ -639,7 +635,8 @@
                                         data-bs-target="#faq2">
                                         <span style="color: #ffffff">
                                             <strong class="mx-2"
-                                                style="font-weight: normal; color: #2F0277; font-size: 19px">02</strong>¿Cómo funciona el
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">02</strong>¿Cómo
+                                            funciona el
                                             programa?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -661,7 +658,8 @@
                                         data-bs-target="#faq3">
                                         <span style="color: #ffffff">
                                             <strong class="mx-2"
-                                            style="font-weight: normal; color: #2F0277; font-size: 19px">03</strong>¿Qué incluyen
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">03</strong>¿Qué
+                                            incluyen
                                             mis cursos?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -683,7 +681,9 @@
                                     <button class="accordion-button faq-question" data-bs-toggle="collapse"
                                         data-bs-target="#faq4">
                                         <span style="color: #ffffff">
-                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">04</strong>¿Qué voy a
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">04</strong>¿Qué
+                                            voy a
                                             aprender?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -703,7 +703,9 @@
                                     <button class="accordion-button faq-question" data-bs-toggle="collapse"
                                         data-bs-target="#faq5">
                                         <span style="color: #ffffff">
-                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">05</strong>¿Cómo puedo
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">05</strong>¿Cómo
+                                            puedo
                                             suscribirme?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -723,7 +725,9 @@
                                     <button class="accordion-button faq-question" data-bs-toggle="collapse"
                                         data-bs-target="#faq6">
                                         <span style="color: #ffffff">
-                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">06</strong>¿Necesito un
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">06</strong>¿Necesito
+                                            un
                                             nivel en el idioma para poder tomar las clases?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -743,7 +747,9 @@
                                     <button class="accordion-button faq-question" data-bs-toggle="collapse"
                                         data-bs-target="#faq7">
                                         <span style="color: #ffffff">
-                                            <strong class="mx-2" style="font-weight: normal; color: #2F0277; font-size: 19px">07</strong>¿Cuántos niveles
+                                            <strong class="mx-2"
+                                                style="font-weight: normal; color: #2F0277; font-size: 19px">07</strong>¿Cuántos
+                                            niveles
                                             Michigan´s Store?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
@@ -792,7 +798,7 @@
                     <div class="col-10">
                         <form class="d-flex justify-content-center" onsubmit="event.preventDefault()">
                             <input type="email" class="form-control custom-input poppins-light"
-                                style="font-size: 12px; width: 416px; height: 60px; background: #615D78; border-radius: 45px; border: none; margin-left: 70px; outline: none; color: #ffffff;"
+                                style="font-size: 12px; width: 416px; height: 60px; background: #615D78; border-radius: 45px; border: none; margin-left: 70px; outline: none !important; color: #ffffff;"
                                 placeholder="¡Ingresa tu correo!">
                             <button type="submit" class="btn btn-email ms-2 text-white" style="cursor: pointer"
                                 id="toggleButton" data-state="plane">
@@ -863,6 +869,11 @@
             </div>
         </footer>
     </div>
+    <!-- Scrollbar button-->
+    <a href="#top" id="back-top" aria-label="back to top" class="scroll-btn-visible">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+    <script src="templates/js/scroll-button.js"></script>
     <script src="templates/js/rotate.js"></script>
     <script src="templates/js/check.js"></script>
 </body>

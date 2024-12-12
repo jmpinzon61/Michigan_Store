@@ -20,16 +20,17 @@
   <!-- Navbar -->
   <header class="container d-flex justify-content-between align-items-center py-3"
     style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px;">
-    <h1 class="fs-6 champ-bold" style="margin-top: -35px;">Michigan's Store</h1>
+    <h1 class="fs-6 champ-bold" style="margin: 0 0 0 -2px;margin-top: -45px">Michigan's</h1>
+    <h1 class="fs-6 champ-bold" style="margin: 0 0 0 -150px;">Store</h1>
     <!-- Nav in PC-->
     <div class="d-none d-block d-lg-block">
       <nav class="d-flex justify-content-between align-items-center"
-        style="max-width: 100%; margin-right: 560px; margin-top: -30px;">
-        <a href="./inicio.html" class="text-white mx-3 poppins-bold">Inicio</a>
-        <a href="./cursos.html" class="text-white mx-3 poppins-bold">Cursos</a>
-        <a href="./precios.html" class="text-white mx-3 poppins-bold">Precios</a>
-        <a href="./nosotros.html" class="text-white mx-3 poppins-bold">Nosotros</a>
-        <a href="./blogs.html" class="text-white mx-3 poppins-bold">Blogs</a>
+        style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
+        <a href="./inicio.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Inicio</a>
+        <a href="./cursos.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Cursos</a>
+        <a href="./precios.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Precios</a>
+        <a href="./nosotros.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Nosotros</a>
+        <a href="./blogs.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Blogs</a>
       </nav>
     </div>
     <!-- Nav in Movil-->
@@ -62,7 +63,7 @@
       <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
         style="height: 40px; width: 40px;">
         <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
-          style="cursor: pointer; background-color: #a19aac; display: flex; padding: 8px; border-radius: 25px;"></i>
+          style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px;"></i>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item text-white poppins-light mb-2" href=""
               style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
@@ -72,30 +73,33 @@
     </div>
   </header>
 
-  <!-- Contenido de la página de Nosotros -->
+  <!-- Contenido de la sección de Nosotros -->
   <main class="container-fluid my-5">
-    <section class="container text-center text-white mt-5" style="position: relative; z-index: 1">
-      <h1 class="fs-2 poppins-bold" style="width: 500px; margin-left: 380px">¡Entendemos y solucionamos las distintas
+    <section class="text-center text-white mt-5">
+      <h1 class="fs-2 poppins-bold" style="width: 500px; margin-left: 480px">¡Entendemos y solucionamos las distintas
         necesidades comunicativas de personas en
         todo el mundo!</h1>
       <div class="row justify-content-center align-items-center mt-4 position-relative">
         <div class="col-md-6" style="margin-left: -650px">
           <img src="./imagenes/cuadricula.png"
-            style="position: relative; z-index: 0; height: 510px; width: 100vw; margin-left: 350px"
+            style="position: relative; z-index: 0; height: 510px; width: 100vw; margin-left: 200px"
             alt="Personas con gafas VR" class="img-fluid">
           <img src="./imagenes/sombra.png"
-            style="position: absolute; z-index: 1; height: 510px; width: 100vw; margin-left: -330px; margin-top: -520px"
+            style="position: absolute; z-index: 1; height: 510px; width: 100vw; margin-left: -430px; margin-top: -520px"
             alt="Personas con gafas VR" class="img-fluid">
           <img src="./imagenes/circunferencia.png"
-            style="position: absolute; z-index: 2; height: 310px; width: 450px; margin-left: 80px; margin-top: -220px"
+            style="position: absolute; z-index: -2; height: 310px; width: 450px; margin-left: 80px; margin-top: -220px"
             alt="Personas con gafas VR" class="img-fluid">
           <img src="./imagenes/persons.png"
             style="position: absolute; z-index: 3; height: 510px; width: 650px; margin-left: -50px; margin-top: -390px"
             alt="Personas con gafas VR" class="img-fluid">
           <img src="./imagenes/CHATBOT.png"
-            style="position: absolute; z-index: 4; height: 136px; width: 121px; margin-left: 670px; margin-top: -140px"
-            alt="Personas con gafas VR" class="img-fluid">
-          <!-- Burbujas de mensaje -->
+            style="position: absolute; z-index: 4; height: 136px; width: 121px; margin-left: 730px; margin-top: -140px"
+            alt="Personas con gafas VR" class="img-fluid" onclick="openChatbot()">
+          <div id="chatbot-container">
+            <button id="chatbot-close" class="bi bi-x  fs-2 text-white" style=" background: #351c76; border-radius: 45px; border: none" onclick="closeChatbot()"></button>
+            <iframe id="chatbot-frame" src="./chat-bot.html"></iframe>
+          </div>
           <div class="position-absolute" style="top: 10%; left: 15%; z-index: 5">
             <div class="d-flex flex-column">
               <div class="col" style="margin-left: 150px;">
@@ -143,52 +147,65 @@
       </div>
     </section>
 
-    <section class="container text-center text-white mt-5">
-      <h2 class="fs-4 p-4 poppins-bold"
-        style="width: 470px; height: 150px; background: linear-gradient(to right, #160033, #271343); margin-top: -57px; margin-left: 380px; position: absolute; z-index: 7">
-        Toma las clases pregrabadas,
-        y ve desbloqueando sesiones en vivo con
-        tutores especializados en el idioma inglés.</h2>
-      <div class="d-flex flex-row">
+    <section class="text-center text-white mt-5 img-font">
+      <h1 class="fs-3 poppins-bold" style="
+      background: linear-gradient(to right, #170134, #271343);
+      background-repeat: repeat;
+      margin: 0 auto;
+      margin-top: -58px;
+      padding: 40px 80px; 
+      position: relative;
+      z-index: 7;
+      color: white;
+      width: 100vw;
+      text-align: center; 
+      ">
+        <p style="margin-left: 425px; width: 34%; font-weight: 600;">Toma las clases pregrabadas, y ve desbloqueando
+          sesiones en vivo con tutores especializados en el idioma inglés.</p>
+      </h1>
+      <div class="d-flex flex-row" style="margin-top: 90px">
         <div class="col-6">
-          <p class="fs-5" style="margin-top: 160px; width: 170px; margin-left: 130px;">
+          <p class="fs-3 text-start" style="margin-top: -50px; width: 270px; margin-left: 170px">
             Tenemos distintas
             modalidades
             de aprendizaje,
             ¡Elije tu favorita!</p>
         </div>
-        <div class="col-6" style="margin-left: -260px">
+        <div class="col-6" style="margin-left: -180px">
           <img src="./imagenes/ofert (1).png"
-            style="height: 236px; width: 236px; margin-left: -360px; position: absolute; z-index: 3; margin-top: 95px"
+            style="height: 266px; width: 266px; margin-left: -360px; position: absolute; z-index: 3; margin-top: -80px"
             alt="Oferta 1">
           <img src="./imagenes/ofert (2).png"
-            style="height: 236px; width: 236px; margin-left: -130px; position: absolute; z-index: 2; margin-top: 95px"
+            style="height: 266px; width: 266px; margin-left: -130px; position: absolute; z-index: 2; margin-top: -80px"
             alt="Oferta 2">
           <img src="./imagenes/ofert (3).png"
-            style="height: 236px; width: 236px; margin-left: 100px; position: absolute; z-index: 1; margin-top: 95px"
+            style="height: 266px; width: 266px; margin-left: 100px; position: absolute; z-index: 1; margin-top: -80px"
             alt="Oferta 3">
         </div>
       </div>
     </section>
 
-    <section class="container text-white mt-5">
+    <section class="text-white mt-5">
       <div class="d-flex flex-row">
-        <div class="col">
+        <div class="col" style="margin-left: 85px">
           <img src="./imagenes/Quienes-somos.png"
-            style="height: 85px;width: 85px; position: absolute; z-index: 5; margin-left: 530px; margin-top: 165px"
+            style="height: 135px;width: 135px; position: absolute; z-index: 5; margin-left: 585px; margin-top: 260px"
             alt="Dr. Jorge Franco" class="rounded-circle img-fluid" style="max-width: 200px;">
-          <div class="card" style="position: relative; z-index: 4">
+          <div class="card" style="position: relative; z-index: 4; height: 375px; width: 585px; margin-top: 45px; margin-left: 90px; border-radius: 25px;">
             <div class="card-body" style="height: 395px; width: 398px">
             </div>
           </div>
         </div>
+        <img src="/./imagenes/Font-Nosotros.png" style="position: absolute; z-index: -4; margin-top: -340px"
+          alt="figura 1">
+        <img src="/./imagenes/bombillo.png" style="position: absolute; z-index: -5; margin-top: -100px;" alt="luz-font">
       </div>
       </div>
-      <div class="col">
+      <div class="col" style="margin-left: 190px">
         <p class="text-center fs-4 poppins-bold"
-          style="position: absolute; z-index: 6; margin-top: -270px; margin-left: 640px">Filosofía institucional</p>
+          style="position: absolute; z-index: 6; margin-top: -380px; margin-left: 640px">Filosofía institucional</p>
         <p class="text-start poppins-light"
-          style="width: 500px; position: absolute; z-index: 7; margin-top: -225px; margin-left: 640px">MICHIGAN MASTER
+          style="width: 500px; position: absolute; z-index: 7; margin-top: -310px; margin-left: 640px">MICHIGAN MASTER
           S.A.S. está comprometida con una
           educación de excelente calidad a nivel local, nacional y
           a escala internacional, que propende por el desarrollo
@@ -204,11 +221,11 @@
       </div>
       <div class="d-flex flex-row">
         <div class="d-flex"
-          style="border-bottom: 1px solid #ff7d71; margin-left: 265px; width: 330px; margin-top: 125px; position: absolute; z-index: 10">
+          style="border-bottom: 1px solid #ff7d71; margin-left: 415px; width: 330px; margin-top: 125px; position: absolute; z-index: 10">
         </div>
-        <div class="col" style="margin-top: 110px">
+        <div class="col" style="margin-top: 110px; margin-left: 170px">
           <h2 style="color: #ff7d71 !important">Titulo Testimonio</h2>
-          <p>Uno de mis mayores deseos era asegurar que Samu, mi nieto de 8 años,
+          <p style="max-width: 520px">Uno de mis mayores deseos era asegurar que Samu, mi nieto de 8 años,
             recibiera una excelente educación. Con la ayuda de Upgrade, ahora
             puedo brindarle la oportunidad de construir una base sólida en inglés
             desde temprana edad, lo que le abrirá puertas a innumerables
@@ -218,83 +235,170 @@
             complace decir que Upgrade logra captar la atención del niño a través
             de programas lúdicos, lo que facilita su compromiso y entusiasmo por
             aprender. ¡Lo recomiendo ampliamente!</p>
-            <div class="d-flex"
-              style="border-bottom: 1px solid #ff7d71; margin-left: 2px; width: 620px; margin-top: 5px; position: absolute; z-index: 10">
+          <div class="d-flex"
+            style="border-bottom: 1px solid #ff7d71; margin-left: 2px; width: 620px; margin-top: 5px; position: absolute; z-index: 10">
+          </div>
+          <div class="p-reference">
+            <p class="gradient-text">Dr. Jorge Franco | Barcelona - España | Doctor Jefe Biobus</p>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="card-font" style="width: 453px; height: 406px; margin-left: 130px; margin-top: 100px">
+              <div class="card-body">
+                <h5 class="card-title champ-bold text-center my-4">Misión</h5>
+                <p class="card-text poppins-light text-center">
+                  "Facilitar el acceso y la excelencia en la
+                  enseñanza del idioma inglés a nivel
+                  mundial, a través de programas de
+                  aprendizaje en línea innovadores
+                  enfocados en que el usuario hable en el
+                  idioma lo más rápido posible centrando
+                  nuestros métodos educativos innovadores
+                  de alta calidad. Nuestra misión es ayudar a
+                  nuestros clientes a alcanzar sus metas
+                  personales y profesionales, brindándoles
+                  las herramientas necesarias para
+                  comunicarse con confianza en un mundo
+                  cada vez más globalizado."</p>
+              </div>
             </div>
+            <div class="card-font-2" style="width: 453px; height: 406px; margin-left: 50px; margin-top: 100px">
+              <div class="card-body">
+                <h5 class="card-title champ-bold text-center my-4">Visión</h5>
+                <p class="card-text poppins-light text-center">
+                  Ser reconocidos como el principal referente
+                  en el mercado de programas de inglés en
+                  línea, destacándonos por nuestra
+                  excelencia educativa, innovación
+                  tecnológica y compromiso con el éxito de
+                  nuestros clientes. Aspiramos crear una
+                  comunidad global de aprendizaje en línea
+                  que promueva la diversidad cultural y el
+                  intercambio de conocimientos a través de
+                  innovación de nuevos modelos
+                  tecnológicos que faciliten la educación,
+                  siendo pioneros en el uso de herramientas
+                  como la realidad virtual en el aprendizaje.
+                </p>
+              </div>
+            </div>
+          </div>
+          </p>
         </div>
-        <div class="col" style="margin-top: 110px">
+        <div class="col" style="margin-top: 110px; margin-left: -550px">
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
+            <div class="carousel-indicators" style="margin: 0px 405px 0px 45px !important">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active rounded-circle me-2" style="width: 10px; height: 10px" aria-current="true"
+                aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
+                class="active rounded-circle" style="width: 10px; height: 10px" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+                class="active rounded-circle ms-2" style="width: 10px; height: 10px" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./imagenes/person-nosotros-1.png"
-                  style="width: 200px; height: 305px; background: #fe706d ; border-radius: 65px" class="d-flex"
-                  alt="...">
-                <img src="./imagenes/_3.png" style="height: 69px; width: 69px; margin-top: -85px; margin-left: 15px"
-                  class="d-flex" alt="...">
+              <div class="carousel-item active" style="margin-top: -95px; height: 450px; margin-left: -15px">
+                <div
+                  style="background: #fe706d;border-radius: 50%; width: 290px; height: 290px; margin-left: 80px; position: absolute; z-index: 2; margin-top: 95px">
+                  <img src="./imagenes/person-nosotros-1.png"
+                    style="width: 220px; height: 270px; margin-left: 80px; margin-top: 10px;  position: relative; z-index: 3"
+                    class="d-flex" alt="...">
+                  <img src="./imagenes/_3.png"
+                    style="height: 69px; width: 69px; margin-top: -80px; margin-left: 120px; position: absolute; z-index: 4"
+                    class="d-flex" alt="...">
+                </div>
               </div>
-              <div class="carousel-item">
-                <img src="./imagenes/person-nosotros-2.png"
-                  style="width: 200px; height: 305px; background: #69e4cc; border-radius: 65px" class="d-flex"
-                  alt="...">
-                <img src="./imagenes/_1.png" style="height: 69px; width: 69px; margin-top: -85px; margin-left: 15px"
-                  class="d-flex" alt="...">
+              <div class="carousel-item" style="margin-top: -95px; height: 450px; margin-left: -15px">
+                <div
+                  style=" background: #69e4cc; border-radius: 50%; width: 290px; height: 290px; margin-left: 80px; position: absolute; z-index: 2; margin-top: 95px">
+                  <img src="./imagenes/person-nosotros-2.png"
+                    style="width: 220px; height: 270px; margin-left: 80px; margin-top: 10px;  position: relative; z-index: 3"
+                    class="d-flex" alt="...">
+                  <img src="./imagenes/_1.png"
+                    style="height: 69px; width: 69px; margin-top: -80px; margin-left: 120px; position: absolute; z-index: 4"
+                    class="d-flex" alt="...">
+                </div>
               </div>
-              <div class="carousel-item">
-                <img src="./imagenes/person-nosotros-3.png"
-                  style="width: 200px; height: 305px; background: #637dfc; border-radius: 65px" class="d-flex"
-                  alt="...">
-                <img src="./imagenes/_2.png" style="height: 69px; width: 69px; margin-top: -85px; margin-left: 15px"
-                  class="d-flex" alt="...">
+              <div class="carousel-item" style="margin-top: -95px; height: 450px; margin-left: -15px">
+                <div
+                  style="background: #637dfc; border-radius: 50%; width: 290px; height: 290px; margin-left: 80px; position: absolute; z-index: 2; margin-top: 95px ">
+                  <img src="./imagenes/person-nosotros-3.png"
+                    style="width: 220px; height: 270px; margin-left: 80px; margin-top: 10px;  position: relative; z-index: 3"
+                    class="d-flex" alt="...">
+                  <img src="./imagenes/_2.png"
+                    style="height: 69px; width: 69px; margin-top: -80px;  margin-left: 120px; position: absolute; z-index: 4"
+                    class="d-flex" alt="...">
+                </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" style="visibility: hidden" type="button"
+              data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
+            <button class="carousel-control-next" style="visibility: hidden" type="button"
+              data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
+
     </section>
 
-    <section class="container text-white mt-5">
-      <h2 class="text-center fs-4 poppins-bold">Déjanos tus datos y nos contactaremos contigo</h2>
-      <form class="row g-3 mt-4">
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Nombre">
+    <section class="text-white mt-5 img-font-form" style="height: 520px; width: 100vw">
+      <div class="d-flex flex-row">
+        <div class="col">
+          <p class=" text-start poppins-light fs-4"
+            style="margin-top: 380px; width: 343px; height: 123px; margin-left: 320px">
+            Elegir <span class="fs-2 champ-bold" style="line-height: 10px">Michigan’s Store</span>
+            no es solo una opción,
+            <span class="fs-2 champ-bold" style="line-height: 10px">es una experiencia</span>
+          </p>
         </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" placeholder="Correo Electrónico">
+        <div class="col" style="max-width: 700px">
+          <h2 class="text-center fs-4 poppins-bold" style="color: #01C8FB">
+            Dejanos tus datos y nos contactaremos contigo
+            contacto@michiganmaster.edu.co</h2>
+          <form class="row g-3 mt-4">
+            <div class="col-md-6">
+              <input type="text" class="form-control-final-section text-white poppins-light" style="height: 50px; width: 310px;text-align: center"
+                placeholder="nombre">
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control-final-section text-white poppins-light"
+                style="height: 50px; width: 310px; margin-left: -28px; text-align: center" placeholder="teléfono">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control-final-section text-white poppins-light" style="height: 50px; width: 640px; text-align: center"
+                placeholder="correo electrónico">
+            </div>
+            <div class="col-md-12">
+              <select class="form-select form-control-final-section text-white text-center poppins-light"
+                style="height: 50px; width: 640px; box-shadow: none !important; border: none !important; text-align: center">
+                <option selected>estado actual</option>
+                <option value="Estudiante">estudiante</option>
+                <option value="Profesional">profesional</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <textarea class="form-control form-control-final-section text-white poppins-light"
+                style="height: 50px; width: 640px; box-shadow: none !important; border: none !important; max-height: 250px; background: #6A6391; text-align: center"
+                rows="3" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="col-md-12">
+              <p class="poppins-light text-center" style="font-size: 10px; width: 410px; margin-left: 125px">
+                Al dar clic en enviar mensaje aceptas las Políticas de Privacidad y protección de
+                datos y doy mi consentimiento para ser contactado y recibir información de
+                Michigan Master y Michigan’s Store por medio de correo electrónico y/o teléfono.
+              </p>
+            </div>
+            <div class="col-12 text-center" style="margin-left: -20px">
+              <button type="submit" class="btn btn-primary-final-section text-white poppins-light text-with-shadow"
+                style="font-weight: 500;">Comenzar Ahora</button>
+            </div>
+          </form>
         </div>
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Teléfono">
-        </div>
-        <div class="col-md-6">
-          <select class="form-select">
-            <option selected>Estado Actual</option>
-            <option value="Estudiante">Estudiante</option>
-            <option value="Profesional">Profesional</option>
-          </select>
-        </div>
-        <div class="col-md-12">
-          <textarea class="form-control" rows="3" placeholder="Mensaje"></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary">Comenzar Ahora</button>
-        </div>
-      </form>
+      </div>
     </section>
 
   </main>
@@ -354,6 +458,12 @@
       </div>
     </footer>
   </div>
+  <!-- Scrollbar button-->
+  <a href="#top" id="back-top" aria-label="back to top" class="scroll-btn-visible">
+    <i class="bi bi-chevron-double-up"></i>
+  </a>
+  <script src="templates/js/open-chat.js"></script>
+  <script src="templates/js/scroll-button.js"></script>
 </body>
 
 </html>
