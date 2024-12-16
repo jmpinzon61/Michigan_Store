@@ -1004,3 +1004,282 @@ textarea:focus+label {
 .scroll-btn-visible {
     display: block;
 }
+
+/* Agenda */
+
+.agenda-title {
+    text-align: center;
+    margin-bottom:  20px;
+}
+
+.session-schedule {
+    display: flex;
+    margin-left: 450px;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.calender, .item-slots {
+    background: rgb(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.session-details {
+    background: #755cf9;
+    border-radius: 30px;
+    margin-left: -470px;
+    flex: 1;
+    text-align: center;
+}
+
+
+.session-details-2 {
+    background: #755cf9;
+    border-radius: 30px;
+    margin-left: -470px;
+    flex: 1;
+    text-align: center;
+}
+
+.calender h2 {
+    margin-bottom: 10px;
+}
+
+.calendar-day .day {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.calendar-days .day.select {
+    background: #5c2d91;
+}
+
+.time-slots ul {
+  list-style: none;
+  padding: 0;   
+}
+
+.time-slots li {
+    margin: 5px 0;
+}
+
+.time-slots .active-slot {
+    background: #5c2d91;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.action-buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 780px;
+    box-shadow: none;
+}
+
+.cancel-button, .join-button {
+    margin: 0px;
+    padding: 0px 0px;
+    border: none;
+    border-radius: 45px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: linear-gradient(to left, #ff4765,#ff706e);
+    height: 50px;
+    width: 253px;
+}
+
+.join-button {
+    background: linear-gradient(to left, #3bdae2, #70e6c9);
+    height: 50px;
+    width: 253px;
+}
+
+.past-sessions-title {
+    margin-top: 30px;
+    margin-left: 130px;
+}
+
+.past-sessions {
+    margin-top: 20px;
+}
+
+.session-item {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 750px;
+    background: #42417b;
+    border-radius: 0 45px 45px 0;
+    padding: 70px;
+    margin-bottom: 30px;
+}
+
+.sesssion-date {
+    text-align: center;
+}
+
+.calendar-card {
+    width: 380px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    background:  #341c73;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.monthYear {
+    text-align: center;
+    font-weight: 600;
+    width: 170px;
+}
+
+.header-calendar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none !important;
+    border-radius: 0%;
+    background:  #341c73;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: none !important;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 200;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 200;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover,
+.date.active {
+    background: #6e5e99;
+    color: black;
+}
+
+.date.inactive {
+    color: #d2d2d2;
+}
+
+.date.inactive:hover {
+    color: white;
+}
+
+.card-agenda {
+    background: #341c73;
+    border-radius: 45px;
+    height: 380px;
+    padding: 10px 10px 10px 10px;
+    width: 110px;
+    margin-top: -380px;
+    margin-left: 290px;
+    text-align: center;
+}
+
+.card-body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll */
+}
+
+ul.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Linea vertical */
+ul.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+ul.timeline li {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Puntos */
+ul.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: white; 
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+ul.timeline li span {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+
