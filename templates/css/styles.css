@@ -273,7 +273,7 @@ body {
     z-index: -999px;
     position: absolute;
     top: 0%;
-    left: 35%;
+    left: 38%;
     right: 0;
     border-radius: 0px 0px 105px 105px;
     height: 155px;
@@ -1279,6 +1279,86 @@ ul.timeline li::before {
 ul.timeline li span {
     display: inline-block;
     margin-left: 20px;
+}
+
+
+/* Setting User */
+
+.profile-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-top: 385px;
+}
+
+.avatars {
+    display: flex;
+    flex-direction: row;
+    max-width: 550px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.avatars img {
+    background-color: #6c5ce7;
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons {
+    margin-top: 1350px;
+    position: absolute;
+    z-index: 40;
+    margin-left: 265px;
+}
+
+.buttons .btn {
+    font-size: 17px;
+    box-shadow: none;
+    border: none;
+    height: 50px;
+    width: 245px;
+    border-radius: 45px;
+}
+
+.btn-cancelar {
+    background: linear-gradient(340deg, #ff3f63, #ff6b6d);
+    color: #fff;
+}
+
+.btn-guardar {
+    background: linear-gradient(340deg, #7952f8, #5a8efe);
+    color: #fff;
+}
+
+.password-input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.toggle-password {
+    cursor: pointer;
+    margin-left: -70px;
+}
+
+.password-input::placeholder {
+    color: #ffffff !important;
+}
+
+.toggle-password {
+    color: #ffffff;
 }
 
 
