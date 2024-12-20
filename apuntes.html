@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes User</title>
+    <link rel="icon" href="imagenes\favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Champ:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./templates/css/styles.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .vocabulario {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+        }
+
+        .circle.small {
+            width: 80px;
+            height: 80px;
+            font-size: 12px;
+        }
+
+        .circle.medium {
+            width: 120px;
+            height: 120px;
+            font-size: 14px;
+        }
+
+        .circle.large {
+            width: 160px;
+            height: 160px;
+            font-size: 16px;
+        }
+
+        .circle:nth-child(1) {
+            background-color: #52c4fa;
+        }
+
+        .circle:nth-child(2) {
+            background-color: #ff5c5c;
+        }
+
+        .circle:nth-child(3) {
+            background-color: #ffcc00;
+        }
+
+        .circle:nth-child(4) {
+            background-color: #8c52ff;
+        }
+
+        .circle:nth-child(5) {
+            background-color: #00cc99;
+        }
+
+        .circle:nth-child(6) {
+            background-color: #ff9a9a;
+        }
+
+        .notas {
+            margin-top: 40px;
+        }
+
+        .nota {
+            background-color: #2a195c;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .past-sessions-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .table-container {
+            position: relative;
+            overflow: auto;
+            margin-top: 15px;
+            max-height: 250px;
+            border-radius: 10px;
+        }
+
+        .table-container table td {
+            padding: 10px;
+            ;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .session-date {
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin: 0;
+        }
+
+        .session-item p {
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: #ccc;
+            margin: 0;
+        }
+
+        .nota-text {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .nota-buttons button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .nota-buttons svg {
+            transition: color 0.3s ease;
+            /* Transición para el color */
+        }
+
+        .nota-buttons svg:hover {
+            color: #ffcc00;
+            /* Cambia a color amarillo al hacer hover */
+        }
+
+
+        .fragmento {
+            margin-top: 40px;
+        }
+
+        .video {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 150px;
+            background: url('./imagenes/Fondo-fragmentos.png');
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        #videos-container {
+            display: flex;
+            overflow-x: auto;
+            cursor: grab;
+            gap: 10px;
+            padding-right: 80px;
+        }
+
+        #videos-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .videos {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            cursor: grab;
+        }
+
+        .card-body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nota-button-img {
+            transition: color 0.3s ease;
+        }
+
+        .nota-buttons svg:hover {
+            color: #ffcc00;
+            /* Cambia el color a amarillo */
+        }
+
+        .card-apuntes {
+            height: 170px;
+            width: 20px;
+            border: none;
+            background-color: #ed1e79;
+            box-shadow: none !important;
+        }
+
+        .card-body-apuntes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-text {
+            margin-left: 0px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="bg-main-purple">
+
+    <!-- Navbar -->
+    <header class="container d-flex justify-content-between align-items-center py-3"
+        style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px">
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: 0 0 0 -2px; margin-top: -55px; color: inherit; text-decoration: none !important">Michigan's</a>
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: -10px 0 0 -335px; color: inherit; text-decoration: none !important">Store</a>
+        <!-- Nav in PC-->
+        <div class="d-none d-block d-lg-block">
+            <nav class="d-flex justify-content-between align-items-center"
+                style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
+                <!-- <a href="./inicio.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Inicio</a>
+                <a href="./cursos.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Cursos</a>
+                <a href="./precios.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Precios</a>
+                <a href="./nosotros.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Nosotros</a>
+                <a href="./blogs.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Blogs</a> -->
+            </nav>
+        </div>
+        <!-- Nav in Movil-->
+        <div class="d-block d-lg-none mx-auto" style="width: 45%; position: relative; margin-top: -155px;">
+            <nav class="d-flex justify-content-between align-items-center flex-nowrap overflow-x-auto"
+                style="white-space: nowrap; width: 100%; margin-top: 2px;">
+                <div style=" margin-top: 200px;">
+                    <a href="#" class="text-white mx-2 poppins-bold">Inicio</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Cursos</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Precios</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Nosotros</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Blogs</a>
+                </div>
+            </nav>
+        </div>
+        <div class="dropdown d-flex align-items-center" style="margin-top: -35px;">
+            <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+            <ul class="dropdown-menu dropdown-menu-end">
+                <!-- <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a></li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a></li> -->
+            </ul>
+            <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+                style="height: 40px; width: 40px;">
+                <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
+                    style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px;"></i>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-white poppins-light mb-2"
+                            href="./configuracion-cuenta-usuario.html"
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración
+                            Cuenta</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido de la página de Apuntes-->
+    <main class="container-fluid my-3">
+        <section class="text-white text-center mb-5 row justify-content-center" style=" margin: 70px 135px 120px 135px">
+            <div class="col-6" style="margin:  5px 5px 5px -5px">
+                <!-- Mi vocabulario -->
+                <h2 class="text-start poppins-light">Mi vocabulario</h2>
+                <div class="vocabulario">
+                    <img src="./svg/Vocabulary-apuntes.svg" alt="" srcset="">
+                </div>
+
+            </div>
+            <div class="col-6"  style="margin:  5px 5px 5px -5px">
+                <div class="notas">
+                    <h2 class="text-start poppins-light" style="margin-top: -40px; margin-left: -75px">Mis notas</h2>
+                    <div style=" margin-left: -320px">
+                        <table style="height: 20%; margin-left: 195px; width: 55vw; margin-top: 15px">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 48px 50px 80px 0px; font-weight: 700">
+                                    </td>
+                                    <td>
+                                        <div
+                                            style="margin-top: -1px; background: #3f103f !important; border-radius: 0px 40px 40px 0px; margin-bottom: 30px">
+                                            <div style="margin-left: 5px">
+                                                <div style="text-align: center">
+                                                    <div class="card-apuntes" style="position: absolute; z-index: 5; margin-left: -20px">
+                                                        <div class="card-body-apuntes">
+                                                            <p class="poppins-light fs-5" style="margin-top: 75px">¡</p>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="p-2" style="text-align: start;">Sesión módulo 1 - Parte 2
+                                                    </h3>
+                                                    <p class="p-2" style="text-align: start; max-width: 450px;">
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam
+                                                        nonummy nibh euismod veniam, quis nostrud exerci tation
+                                                        ullamcorper
+                                                        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="nota-buttons" style="padding: 48px 10px 80px 55px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 36 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.1607 0V2.22222H0V6.66667H2.23214V35.5556C2.23214 36.7343 2.70249 37.8648 3.5397 38.6983C4.37692 39.5317 5.51243 40 6.69643 40H29.0179C30.2019 40 31.3374 39.5317 32.1746 38.6983C33.0118 37.8648 33.4821 36.7343 33.4821 35.5556V6.66667H35.7143V2.22222H24.5536V0H11.1607ZM11.1607 11.1111H15.625V31.1111H11.1607V11.1111ZM20.0893 11.1111H24.5536V31.1111H20.0893V11.1111Z"
+                                                fill="#544e6d" />
+                                        </svg>
+                                    <td class="nota-buttons" style="padding: 48px 50px 85px 0px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 44 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="nota-button-img">
+                                            <path
+                                                d="M21.7857 32.1474L35.2493 40L31.6764 25.2L43.5714 15.2421L27.9075 13.9368L21.7857 0L15.6639 13.9368L0 15.2421L11.8732 25.2L8.32214 40L21.7857 32.1474Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 48px 50px 80px 0px; font-weight: 700">
+                                    </td>
+                                    <td>
+                                        <div
+                                            style="margin-top: -10px; background: #1F0C50 !important; border-radius: 0px 40px 40px 0px; margin-bottom: 30px">
+                                            <div style="margin-left: 5px">
+                                                <div style="text-align: center;">
+                                                    <div class="card-apuntes" style="position: absolute; z-index: 5; margin-left: -20px; background-color: #7955f9 !important">
+                                                        <div class="card-body-apuntes">
+                                                            <p class="poppins-light fs-5" style="margin-top: 75px">¡</p>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="p-2" style="text-align: start;">Sesión módulo 1 - Parte 2
+                                                    </h3>
+                                                    <p class="p-2" style="text-align: start; max-width: 450px;">
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam
+                                                        nonummy nibh euismod veniam, quis nostrud exerci tation
+                                                        ullamcorper
+                                                        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="nota-buttons" style="padding: 48px 10px 80px 55px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 36 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.1607 0V2.22222H0V6.66667H2.23214V35.5556C2.23214 36.7343 2.70249 37.8648 3.5397 38.6983C4.37692 39.5317 5.51243 40 6.69643 40H29.0179C30.2019 40 31.3374 39.5317 32.1746 38.6983C33.0118 37.8648 33.4821 36.7343 33.4821 35.5556V6.66667H35.7143V2.22222H24.5536V0H11.1607ZM11.1607 11.1111H15.625V31.1111H11.1607V11.1111ZM20.0893 11.1111H24.5536V31.1111H20.0893V11.1111Z"
+                                                fill="#544e6d" />
+                                        </svg>
+                                    <td class="nota-buttons" style="padding: 48px 50px 85px 0px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 44 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="nota-button-img">
+                                            <path
+                                                d="M21.7857 32.1474L35.2493 40L31.6764 25.2L43.5714 15.2421L27.9075 13.9368L21.7857 0L15.6639 13.9368L0 15.2421L11.8732 25.2L8.32214 40L21.7857 32.1474Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 48px 50px 80px 0px; font-weight: 700">
+                                    </td>
+                                    <td>
+                                        <div style="margin-top: -10px; background: #1F0C50 !important; border-radius: 0px 40px 40px 0px; margin-bottom: 30px">
+                                            <div style="margin-left: 5px">
+                                                <div style="text-align: center;">
+                                                    <div class="card-apuntes" style="position: absolute; z-index: 5; margin-left: -20px; background-color: #7955f9 !important">
+                                                        <div class="card-body-apuntes">
+                                                            <p class="poppins-light fs-5" style="margin-top: 75px">¡</p>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="p-2" style="text-align: start;">Sesión módulo 1 - Parte 2</h3>
+                                                    <p class="p-2" style="text-align: start; max-width: 450px; overflow: hidden; height: 72px" id="text-content">
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                                    </p>
+                                                    <a class="champ-bold" href="javascript:void(0);" onclick="toggleText()" style="margin-left: 410px; margin-top: -70px; color: #7954f8" id="toggle-button">Ver todo</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="nota-buttons" style="padding: 48px 10px 80px 55px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 36 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.1607 0V2.22222H0V6.66667H2.23214V35.5556C2.23214 36.7343 2.70249 37.8648 3.5397 38.6983C4.37692 39.5317 5.51243 40 6.69643 40H29.0179C30.2019 40 31.3374 39.5317 32.1746 38.6983C33.0118 37.8648 33.4821 36.7343 33.4821 35.5556V6.66667H35.7143V2.22222H24.5536V0H11.1607ZM11.1607 11.1111H15.625V31.1111H11.1607V11.1111ZM20.0893 11.1111H24.5536V31.1111H20.0893V11.1111Z"
+                                                fill="#544e6d" />
+                                        </svg>
+                                    <td class="nota-buttons" style="padding: 48px 50px 85px 0px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 44 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="nota-button-img">
+                                            <path
+                                                d="M21.7857 32.1474L35.2493 40L31.6764 25.2L43.5714 15.2421L27.9075 13.9368L21.7857 0L15.6639 13.9368L0 15.2421L11.8732 25.2L8.32214 40L21.7857 32.1474Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </td>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 48px 50px 80px 0px; font-weight: 700">
+                                    </td>
+                                    <td>
+                                        <div
+                                            style="margin-top: -10px; background: #3f103f !important; border-radius: 0px 40px 40px 0px">
+                                            <div style="margin-left: 5px">
+                                                <div style="text-align: center;">
+                                                    <div class="card-apuntes" style="position: absolute; z-index: 5; margin-left: -20px">
+                                                        <div class="card-body-apuntes">
+                                                            <p class="poppins-light fs-5" style="margin-top: 75px">¡</p>
+                                                        </div>
+                                                    </div>
+                                                    <h3 class="p-2" style="text-align: start;">Sesión módulo 1 - Parte 2
+                                                    </h3>
+                                                    <p class="p-2" style="text-align: start; max-width: 450px;">
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                                        sed diam
+                                                        nonummy nibh euismod veniam, quis nostrud exerci tation
+                                                        ullamcorper
+                                                        suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="nota-buttons" style="padding: 48px 10px 80px 55px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 36 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.1607 0V2.22222H0V6.66667H2.23214V35.5556C2.23214 36.7343 2.70249 37.8648 3.5397 38.6983C4.37692 39.5317 5.51243 40 6.69643 40H29.0179C30.2019 40 31.3374 39.5317 32.1746 38.6983C33.0118 37.8648 33.4821 36.7343 33.4821 35.5556V6.66667H35.7143V2.22222H24.5536V0H11.1607ZM11.1607 11.1111H15.625V31.1111H11.1607V11.1111ZM20.0893 11.1111H24.5536V31.1111H20.0893V11.1111Z"
+                                                fill="#544e6d" />
+                                        </svg>
+                                    <td class="nota-buttons" style="padding: 48px 50px 85px 0px; cursor: pointer">
+                                        <svg width="35" height="35" viewBox="0 0 44 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="nota-button-img">
+                                            <path
+                                                d="M21.7857 32.1474L35.2493 40L31.6764 25.2L43.5714 15.2421L27.9075 13.9368L21.7857 0L15.6639 13.9368L0 15.2421L11.8732 25.2L8.32214 40L21.7857 32.1474Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="fragmento">
+                    <h2 class="text-start poppins-light">Fragmento de clase</h2>
+                    <div class="videos card-body" id="videos-container">
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                        <div class="video">
+                            <img style="margin-top: 95px; margin-left: 150px" src="./svg/button-play.svg"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Scrollbar button-->
+    <a href="#top" id="back-top" aria-label="back to top" class="scroll-btn-visible">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+    <script src="templates/js/scroll-button.js"></script>
+    <script src="templates/js/grab-move.js"></script>
+    <script>
+        function toggleText() {
+            const textContent = document.getElementById("text-content");
+            const toggleButton = document.getElementById("toggle-button");
+    
+            if (textContent.style.height === "72px") {
+                textContent.style.height = "auto";
+                toggleButton.textContent = "Ver menos";
+            } else {
+                textContent.style.height = "72px";
+                toggleButton.textContent = "Ver todo";
+            }
+        }
+    </script>
+</body>
+
+</html>

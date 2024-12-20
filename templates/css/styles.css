@@ -1361,5 +1361,116 @@ ul.timeline li span {
     color: #ffffff;
 }
 
+/* Seccion de configuración de cuenta de usuario*/
+
+.gradient-button-settings-account {
+    background: linear-gradient(180deg, #5f84fc, #765af9);
+    border: none !important;
+    box-shadow: none !important;
+    color: #fff;
+    margin-top: 380px;
+    height: 50px;
+    width: 203px;
+}
+
+/* Seccion menu navegacion usuario*/
+
+.menu-container-user {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu-user {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    width: 90%;
+    max-width: 1950px;
+    margin: 90px 24px 80px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-user .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-user .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-user .close-btn {
+    position: absolute;
+    z-index: 100;
+    top: -250px;
+    right: 470px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn-menu-2 {
+    position: absolute;
+    z-index: 100;
+    top: -280px;
+    right: 470px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    background: #372f58;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-user {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-user .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-user.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
 
 
