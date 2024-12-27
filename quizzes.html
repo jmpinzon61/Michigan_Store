@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michigan's Store - Pricing Page</title>
+    <link rel="icon" href="./imagenes/favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Champ:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./templates/css/styles.css">
+    <style>
+        .instructions {
+            flex: 1;
+            margin-left: -20px
+        }
+
+        .instructions .timer {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #2d2176;
+            border-radius: 45px;
+        }
+
+        .instructions p {
+            font-size: 1.2rem;
+        }
+
+        .practice-area {
+            position: relative;
+            flex: 3;
+            margin-left: 190px;
+            height: 550px;
+            width: 550px;
+            background: #5032be;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            margin-bottom: 25px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .practice-area .sentence {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 355px;
+        }
+
+        .practice-area .sentence div {
+            flex: 1;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .practice-area .words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .practice-area .words span {
+            background: #4f0ca4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: end;
+            gap: 20px;
+        }
+
+        .navigation button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .navigation .back {
+            height: 50px;
+            width: 200px;
+            background: linear-gradient(180deg, #ff716e, #ff3b62);
+            color: white;
+        }
+
+        .navigation .next {
+            height: 50px;
+            width: 200px;
+            background: #3e319c;
+            color: white;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            position: absolute;
+            top: -1px;
+            right: 505px;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ffffff !important;
+        }
+
+        .btn-close::before {
+            content: "×";
+            font-size: 25px;
+        }
+
+        .card-quiz {
+            background: #7e6cc5;
+            height: 50px;
+            width: 160px;
+            border-radius: 45px;
+        }
+
+        .selected-card {
+            border: 2px solid #6474f8;
+            background-color: #5a50d7;
+            transition: all 0.3s ease;
+        }
+
+        .puzzle-container {
+            padding: 20px;
+        }
+
+        .puzzle-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .puzzle-cell {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #6c3ef6;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 24px;
+            margin: 0 5px;
+            background-color: #7745ff;
+        }
+
+        .letter-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .letter {
+            width: 50px;
+            height: 50px;
+            margin: 0 5px;
+        }
+
+        .input-group {
+            display: flex;
+            margin-top: 165px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .custom-input {
+            height: 30px;
+            width: 25px;
+            border: none;
+            border-bottom: 2px solid #00c6ff;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: transparent;
+            color: #fff;
+            text-align: center;
+        }
+
+        .custom-input:focus {
+            outline: none;
+            border-bottom: 2px solid #00c6ff;
+            box-shadow: none;
+        }
+
+        .container-canvas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        #drawingCanvas {
+            margin-top: 55px;
+            position: absolute;
+            /* border: 2px solid #6c3ef6; */
+            border-radius: 10px;
+            background-color: #5032BE;
+            cursor: crosshair;
+            z-index: 1;
+        }
+
+        .cards-container {
+            margin-top: 105px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            justify-content: center;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .card-canva {
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: #ffffff;
+            color: black;
+            text-align: center;
+            font-size: 1rem;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card-canva:hover {
+            background-color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .practice-container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #2e1a74;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-container {
+            margin-top: 65px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .image-candy {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .sentence-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .final-sentences-content {
+            margin-top: 235px;
+            text-align: center;
+        }
+
+        .sentence {
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .senteces-final {
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center; 
+        }
+
+        .input-field {
+            border: none;
+            border-bottom: 2px solid #00cdff;
+            background: transparent;
+            color: white;
+            font-size: 1.2rem;
+            width: 170px;
+            line-height: -135px;
+            text-align: center;
+            margin: 0 8px;
+            vertical-align: middle;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-bottom: 2px solid #00cdff;
+        }
+    </style>
+</head>
+
+<body class="bg-main-purple">
+    <!-- Navbar -->
+    <header class="container d-flex justify-content-between align-items-center py-3"
+        style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px">
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: 0 0 0 -2px; margin-top: -55px; color: inherit; text-decoration: none !important">Michigan's</a>
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: -10px 0 0 -400px; color: inherit; text-decoration: none !important">Store</a>
+        <!-- Nav in PC-->
+        <div class="d-none d-block d-lg-block">
+            <nav class="d-flex justify-content-between align-items-center"
+                style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
+                <!-- <a href="./inicio.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Inicio</a>
+                <a href="./cursos.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Cursos</a>
+                <a href="./precios.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Precios</a>
+                <a href="./nosotros.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Nosotros</a>
+                <a href="./blogs.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Blogs</a> -->
+            </nav>
+        </div>
+        <!-- Nav in Movil-->
+        <div class="d-block d-lg-none mx-auto" style="width: 45%; position: relative; margin-top: -155px;">
+            <nav class="d-flex justify-content-between align-items-center flex-nowrap overflow-x-auto"
+                style="white-space: nowrap; width: 100%; margin-top: 2px;">
+                <div style=" margin-top: 200px;">
+                    <a href="#" class="text-white mx-2 poppins-bold">Inicio</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Cursos</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Precios</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Nosotros</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Blogs</a>
+                </div>
+            </nav>
+        </div>
+        <div class="dropdown d-flex align-items-center" style="margin-top: -35px;">
+            <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a></li>
+                <li><a class="dropdown-item text-white poppins-light mb-2" href="./content-quiz-module.html"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Quizz Module</a></li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a></li>
+            </ul>
+            <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+                style="height: 40px; width: 40px;">
+                <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
+                    style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px;"></i>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-white poppins-light mb-2" href=""
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <img src="./imagenes/font-quizzes-1.png"
+        style="position: fixed; z-index: -1; width: 100vw; height: 100vh; bottom: 0;">
+    <img src="./imagenes/font-quizzes-2.png"
+        style="position: fixed; z-index: -2; width: 60vw; height: 60vh; bottom: 0; margin-left: 645px">
+    <img src="./imagenes/font-quizzes-3.png" style="position: fixed; z-index: -3; width: 100vw; height: 100vh">
+    <img src="./imagenes/font-quizzes-4.png"
+        style="position: fixed; z-index: -4; width: 100vw; height: 100vh; margin-left: 250px; margin-top: -165px;">
+
+    <main class="container-fluid d-flex justify-content-center my-3 mx-auto">
+        <section style="margin: 25px 10px 10px 10px">
+            <div class="d-flex flex-row align-items-center">
+                <div class="col">
+                    <div class="instructions">
+                        <div class="timer text-center poppins-light">00:00:00</div>
+                    </div>
+                    <div class="instructions d-flex align-items-center">
+                        <img src="./imagenes/section-timer quiz.png">
+                        <p class="text-start poppins-light"
+                            style="color: #04b5eb; font-weight: 600; width: 205px; margin-top: -410px; margin-left: 10px">
+                            Estructura la frase de manera correcta
+                        </p>
+                        </img>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-1">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(1)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Práctica: Gramática
+                                </p>
+                            </div>
+                            <div class="sentence">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="words poppins-light">
+                                <span>your</span>
+                                <span>exam</span>
+                                <span>prepare</span>
+                                <span>it</span>
+                                <span>!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-2">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(2)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Práctica: What time is
+                                    it?
+                                </p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="col-6 mt-2">
+                                    <p class=" text-center" style="margin-top: 150px">it’s twety twelve</p>
+                                </div>
+                                <div class="col-6 mt-2">
+                                    <p class="text-center" style="margin-top: 150px">it’s twelve twety</p>
+                                </div>
+                            </div>
+                            <img src="./imagenes/q-2-ex.png"
+                                style=" height: 80px; width: 5px; position: absolute; z-index: 4; margin-top: -65px; margin-left: 255px"
+                                alt="">
+                            <img class="ms-4" src="./imagenes/q2.png"
+                                style="margin-top: -20px; height: 195px; width: 285px" alt="q2">
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-3">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(3)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Practica: Escucha
+                                </p>
+                                <img src="./svg/q3.svg"
+                                    style="margin-top: 125px; margin-left: 125px; position: absolute; z-index: 5"
+                                    alt="audio">
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2 gy-2" style="margin: 230px 50px 50px 70px">
+                                <div class="col">
+                                    <div class="card-quiz mb-3" onclick="selectCard(this)">
+                                        <p class="text-center poppins-light"
+                                            style="font-weight: 400; padding-top: 12px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+                                            flowes and card</p>
+                                    </div>
+                                    <div class="card-quiz" onclick="selectCard(this)">
+                                        <p class="text-center poppins-light"
+                                            style="font-weight: 400; padding-top: 12px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+                                            a card and cake</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card-quiz mb-3" onclick="selectCard(this)">
+                                        <p class="text-center poppins-light"
+                                            style="font-weight: 400; padding-top: 12px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+                                            cake and flowers</p>
+                                    </div>
+                                    <div class="card-quiz" onclick="selectCard(this)">
+                                        <p class="text-center poppins-light"
+                                            style="font-weight: 400; padding-top: 12px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+                                            Lorem ipsum </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-4">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(4)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Practica: Escucha
+                                </p>
+                                <div class="puzzle-container">
+                                    <div style="margin-left: 125px; margin-top: 65px">
+                                        <div class="puzzle-row">
+                                            <input type="text" style="margin-left: 185px" class="puzzle-cell">
+                                        </div>
+                                        <div class="puzzle-row">
+                                            <input type="text" class="puzzle-cell">
+                                            <input type="text" class="puzzle-cell">
+                                            <input type="text" class="puzzle-cell">
+                                            <input type="text" class="puzzle-cell">
+                                        </div>
+                                        <div class="puzzle-row" style="margin-left: -3px">
+                                            <input type="text" style="margin-left: 65px" class="puzzle-cell">
+                                            <input type="text" style="margin-left: 65px" class="puzzle-cell">
+                                        </div>
+                                        <div class="puzzle-row" style="margin-left: -5px">
+                                            <input type="text" style="margin-right: 5px" class="puzzle-cell">
+                                            <input type="text" style="margin-right: 5px" class="puzzle-cell">
+                                            <input type="text" style="margin-right: 5px" class="puzzle-cell">
+                                            <input type="text" style="margin-right: 240px" class="puzzle-cell">
+                                        </div>
+                                        <div class="puzzle-row">
+                                            <input type="text" style="margin-left: -55px" class="puzzle-cell">
+                                        </div>
+                                    </div>
+
+                                    <div class="letter-row">
+                                        <img src="./svg/n.svg"
+                                            style="position: absolute; z-index: 13; margin-left: -320px; margin-top: 10px; height: 20px; width: 20px"
+                                            alt="N">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 2; margin-left: -315px;" alt="N"
+                                            class="letter">
+                                        <img src="./svg/i.svg"
+                                            style="position: absolute; z-index: 14; margin-left: -190px; margin-top: 7px; height: 25px; width: 25px"
+                                            alt="I">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 4; margin-left: -185px" alt="I"
+                                            class="letter">
+                                        <img src="./svg/e.svg"
+                                            style="position: absolute; z-index: 15; margin-left: -60px; margin-top: 10px; height: 20px; width: 20px"
+                                            alt="E">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 6; margin-left: -55px" alt="E"
+                                            class="letter">
+                                        <img src="./svg/m.svg"
+                                            style="position: absolute; z-index: 16; margin-left: 75px; margin-top: 7px;  height: 25px; width: 25px"
+                                            alt="M">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 8; margin-left: 75px" alt="M"
+                                            class="letter">
+                                        <img src="./svg/d.svg"
+                                            style="position: absolute; z-index: 17;margin-left: 200px; margin-top: 5px;  height: 25px; width: 25px"
+                                            alt="D">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 10; margin-left: 205px" alt="D"
+                                            class="letter ">
+                                        <img src="./svg/a.svg"
+                                            style="position: absolute; z-index: 18; margin-left: 330px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="A">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 12; margin-left: 335px" alt="A"
+                                            class="letter">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-5">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(5)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Practica: Escucha
+                                </p>
+                                <div class="puzzle-container">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <p class="text-center poppins-light" style="font-weight: 400; width: 300px">Said
+                                            when something is definitely true or is sure to happen</p>
+                                    </div>
+                                    <div class="input-group poppins-light fs-2" style="font-weight: 400">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                        <input type="text" class="custom-input">
+                                    </div>
+                                    <div class="letter-row" style="margin-left: 50px; margin-top: 150px">
+                                        <img src="./svg/y.svg"
+                                            style="position: absolute; z-index: 13; margin-left: -420px; margin-top: 10px; height: 20px; width: 20px"
+                                            alt="Y">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 2; margin-left: -415px;" alt="N"
+                                            class="letter">
+                                        <img src="./svg/c.svg"
+                                            style="position: absolute; z-index: 14; margin-left: -315px; margin-top: 10px; height: 20px; width: 20px"
+                                            alt="C">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 4; margin-left: -310px" alt="I"
+                                            class="letter">
+                                        <img src="./svg/a.svg"
+                                            style="position: absolute; z-index: 15; margin-left: -210px; margin-top: 10px; height: 20px; width: 20px"
+                                            alt="A">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 6; margin-left: -205px" alt="E"
+                                            class="letter">
+                                        <img src="./svg/n.svg"
+                                            style="position: absolute; z-index: 16; margin-left: -100px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="N">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 8; margin-left: -95px" alt="M"
+                                            class="letter">
+                                        <img src="./svg/r.svg"
+                                            style="position: absolute; z-index: 17;margin-left: 10px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="R">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 10; margin-left: 15px" alt="D"
+                                            class="letter ">
+                                        <img src="./svg/e.svg"
+                                            style="position: absolute; z-index: 18; margin-left: 120px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="E">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 12; margin-left: 125px" alt="A"
+                                            class="letter">
+                                        <img src="./svg/t.svg"
+                                            style="position: absolute; z-index: 18; margin-left: 230px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="T">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 12; margin-left: 235px" alt="A"
+                                            class="letter">
+                                        <img src="./svg/i.svg"
+                                            style="position: absolute; z-index: 18; margin-left: 340px; margin-top: 10px;  height: 20px; width: 20px"
+                                            alt="I">
+                                        <img src="./imagenes/camp.png"
+                                            style="position: absolute; z-index: 12; margin-left: 345px" alt="A"
+                                            class="letter">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-6">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(6)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Práctica: Gramática
+                                </p>
+                            </div>
+                            <div class="d-flex flex-row" style=" position: relative">
+                                <div class="col">
+                                    <canvas id="drawingCanvas" width="500" height="300"></canvas>
+                                </div>
+                                <div class="col">
+                                    <div class="container-canvas" style="position: relative">
+                                        <div class="cards-container" style="position: absolute">
+                                            <div class="d-flex flex-row"
+                                                style="margin-top: 270px; margin-left: -260px; gap: 120px">
+                                                <div class="col">
+                                                    <div class="card-canva card-1 mb-2">
+                                                        travel
+                                                    </div>
+                                                    <div class="card-canva card-2 mb-2">
+                                                        always
+                                                    </div>
+                                                    <div class="card-canva card-3 mb-2">
+                                                        taste
+                                                    </div>
+                                                    <div class="card-canva card-4 mb-2">
+                                                        half
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="card-canva card-5 mb-2" style="color: red">
+                                                        /ei/
+                                                    </div>
+                                                    <div class="card-canva card-6 mb-2" style="color: red">
+                                                        /æ/
+                                                    </div>
+                                                    <div class="card-canva card-7 mb-2" style="color: red">
+                                                        /æ/
+                                                    </div>
+                                                    <div class="card-canva card-8 mb-2" style="color: red">
+                                                        /a:/
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-7">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(7)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Práctica:
+                                    Gramática
+                                </p>
+                            </div>
+                            <div class="image-container">
+                                <img class="image-candy" src="./imagenes/candys-quizzes.png" alt="Candy Image">
+                            </div>
+                            <div class="sentence-container">
+                                <p class="sentence mx-4 poppins-light">
+                                    I like <input type="text" class="input-field poppins-light"/><input type="text" class="input-field poppins-light" />.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="practice-areas-container">
+                        <div class="practice-area" id="practice-area-8">
+                            <div class="header">
+                                <button class="btn-close" onclick="closePracticeArea(8)"></button>
+                                <p class="practice-title poppins-light"
+                                    style="color: #7e6bc6; margin-left: 35px; margin-top: -12px;">Práctica:
+                                    Gramática
+                                </p>
+                                <img src="./svg/q3.svg"
+                                style="margin-top: 125px; margin-left: 125px; position: absolute; z-index: 5"
+                                alt="audio">
+                            </div>
+                            <div class="final-sentences-content">
+                                <p class="senteces-final mx-4 poppins-light" style="color: #00cdff">
+                                    en<input type="text" class="input-field poppins-light" style="width: 50px"/><input type="text" class="input-field poppins-light" style="width: 75px"/><input type="text" class="input-field poppins-light" style="width: 35px"/><input type="text" class="input-field poppins-light" style="width: 45px"/>
+                                </p>
+                                <p class="senteces-final poppins-light" style="color: #00cdff">
+                                    es<input type="text" class="input-field poppins-light" style="width: 245px"/>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation poppins-light">
+                        <button class="back" onclick="showPreviousPracticeArea()">Volver</button>
+                        <button class="next" onclick="showNextPracticeArea()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer PC-->
+    <div class="d-none d-block d-lg-block" style="margin-top: 195px;">
+        <footer class="gradient-customs text-white p-4 col-md-4 p-md-5 text-center mx-auto"
+            style="width: 1345px; height: 150px;">
+            <div class="d-flex justify-content-center  text-center row">
+                <div class="col" style="margin-left: 35px;">
+                    <h2 class="fs-2 champ-bold">Michigan's Store</h2>
+                    <p class="mt-2 poppins-light">Apreder inglés nunca fue tan fácil</p>
+                </div>
+                <div class="col me-4">
+                    <a href="https://www.facebook.com/michiganmaster" class="fa-brands fa-facebook-f mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 60px; text-align: center; display: inline-block;"></a>
+                    <a href="https://www.instagram.com/michiganmastersas/" class="fa-brands fa-instagram mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                    <a href="https://tiktok.com/@michiganmasterco" class="fa-brands fa-tiktok mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                    <a href="https://wa.me/+573228532254" class="fa-brands fa-whatsapp mx-2"
+                        style="font-size: 40px; text-decoration: none; color: #3b82f6; background-color: #ffffff; border-radius: 50%; height: 55px; width: 55px; line-height: 55px; text-align: center; display: inline-block;"></a>
+                </div>
+                <div class="col">
+                    <p class="poppins-light" style="font-size: 15px;color: #a9aeeb; margin-left: -50px;">Privacity
+                        Policy - Terms & Agreements
+                    <p class="poppins-light"
+                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2024 Michigan´s
+                        Store</p>
+                    <p class="poppins-light"
+                        style="font-size: 15px; color: #a9aeeb; margin-top: -15px; margin-left: -2px;">Todos los
+                        derechos reservados</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer Movil-->
+    <div class="d-block d-lg-none">
+        <footer class="d-flex gradient-custom text-white p-4 p-md-5 text-center mx-auto flex-wrap"
+            style="max-width: 295px; height: 320px; margin-top: 95px;">
+            <div class="container p-2" style="margin-top: 5px;">
+                <h2 class="fs-2 champ-bold">Michigan's Store</h2>
+                <p class="mt-2 poppins-light">Aprender inglés nunca fue tan fácil</p>
+                <div class="d-flex justify-content-center mt-4 flex-wrap">
+                    <i class="fa-brands fa-facebook mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-instagram mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-tiktok mx-2" style="font-size: 30px;"></i>
+                    <i class="fa-brands fa-whatsapp mx-2" style="font-size: 30px;"></i>
+                </div>
+                <p class="mx-auto mt-2" style="border-bottom: 1px solid #ffffff; max-width: 75%;"></p>
+                <div class="mt-2">
+                    <p class="poppins-light" style="color: #a9aeeb;">Privacity Policy - Terms & Agreements</p>
+                </div>
+                <p class="mt-n2 poppins-light" style="font-size: 12px; color: #a9aeeb;">©2024 UpGrade | Todos los
+                    derechos reservados
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- Scrollbar button-->
+    <a href="#top" id="back-top" aria-label="back to top" class="scroll-btn-visible">
+        <i class="bi bi-chevron-double-up"></i>
+    </a>
+    <script>
+        let currentPracticeIndex = 0;
+        const practiceAreas = document.querySelectorAll('.practice-area');
+        const nextButton = document.querySelector('.next');
+
+        function closePracticeArea(index) {
+            const practiceArea = document.getElementById(`practice-area-${index}`);
+            if (practiceArea) {
+                practiceArea.style.display = 'none';
+            }
+        }
+
+        function showPracticeArea(index) {
+            const practiceArea = document.getElementById(`practice-area-${index}`);
+            if (practiceArea) {
+                practiceArea.style.display = 'block'
+            }
+        }
+
+        function updateNextButton() {
+            if (currentPracticeIndex === practiceAreas.length -1) {
+                nextButton.textContent = 'Finalizar';
+                nextButton.style.backgroundColor = '#6ae4cb';
+                nextButton.style.color = '#ffffff';
+                nextButton.onclick = () => alert('Practica completada')
+            } else {
+                nextButton.textContent = 'Siguiente';
+                nextButton.style.backgroundColor = '';
+                nextButton.style.color = '';
+                nextButton.onclick = showNextPracticeArea
+            }
+        }
+
+
+        function showNextPracticeArea() {
+            if (currentPracticeIndex < practiceAreas.length - 1) {
+                closePracticeArea(currentPracticeIndex + 1);
+                currentPracticeIndex++;
+                showPracticeArea(currentPracticeIndex + 1);
+                updateNextButton();
+            }
+        }
+
+        function showPreviousPracticeArea() {
+            if (currentPracticeIndex > 0) {
+                closePracticeArea(currentPracticeIndex + 1);
+                currentPracticeIndex--;
+                showPracticeArea(currentPracticeIndex + 1);
+                updateNextButton();
+            }
+        }
+
+        practiceAreas.forEach((area, index) => {
+            if (index !== currentPracticeIndex) area.style.display = 'none';
+        });
+
+        updateNextButton();
+
+        //Canvas
+
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+        let isDrawing = false;
+
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDrawing) {
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.strokeStyle = '#f0230c';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+            ctx.closePath();
+        });
+
+    </script>
+    <script src="templates/js/scroll-button.js"></script>
+    <script src="templates/js/calendar.js"></script>
+    <script src="templates/js/border-event.js"></script>
+</body>
+
+</html>

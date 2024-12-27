@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michigan's Store - Pricing Page</title>
+    <link rel="icon" href="./imagenes/favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Champ:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./templates/css/styles.css">
+</head>
+
+<body class="bg-main-purple" style="overflow-y: hidden">
+    <!-- Navbar -->
+    <header class="container d-flex justify-content-between align-items-center py-3"
+        style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px">
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: 0 0 0 -2px; margin-top: -55px; color: inherit; text-decoration: none !important">Michigan's</a>
+        <a href="./inicio.html" class="fs-5 champ-bold"
+            style="margin: -10px 0 0 -400px; color: inherit; text-decoration: none !important">Store</a>
+        <!-- Nav in PC-->
+        <div class="d-none d-block d-lg-block">
+            <nav class="d-flex justify-content-between align-items-center"
+                style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
+                <!-- <a href="./inicio.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Inicio</a>
+                <a href="./cursos.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Cursos</a>
+                <a href="./precios.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Precios</a>
+                <a href="./nosotros.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Nosotros</a>
+                <a href="./blogs.html" class="text-white mx-4 poppins-bold" style="font-size: 17px">Blogs</a> -->
+            </nav>
+        </div>
+        <!-- Nav in Movil-->
+        <div class="d-block d-lg-none mx-auto" style="width: 45%; position: relative; margin-top: -155px;">
+            <nav class="d-flex justify-content-between align-items-center flex-nowrap overflow-x-auto"
+                style="white-space: nowrap; width: 100%; margin-top: 2px;">
+                <div style=" margin-top: 200px;">
+                    <a href="#" class="text-white mx-2 poppins-bold">Inicio</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Cursos</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Precios</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Nosotros</a>
+                    <a href="#" class="text-white mx-2 poppins-bold">Blogs</a>
+                </div>
+            </nav>
+        </div>
+        <div class="dropdown d-flex align-items-center" style="margin-top: -35px;">
+            <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a></li>
+                <li><a class="dropdown-item text-white poppins-light mb-2" href="./content-quiz-module.html"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Quizz Module</a></li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-white poppins-light" href="#"
+                        style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a></li>
+            </ul>
+            <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+                style="height: 40px; width: 40px;">
+                <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
+                    style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px;"></i>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item text-white poppins-light mb-2" href=""
+                            style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <img src="./svg/vocabulary.svg"
+        style="position: fixed; z-index: 6; width: 50vw; height: 50vh; margin-left: 395px; margin-top: 135px">
+    <img src="./imagenes/Font-module-quizz-2.png"
+        style="position: fixed; z-index: -2; width: 225px; height: 225px; margin-left: 750px; margin-top: 225px">
+    <img src="./imagenes/Font-module-quizz.png"
+        style="position: fixed; z-index: -3; width: 1500px; height: 750px; margin-left: 90px; margin-top: -65px;">
+    <img src="./imagenes/Font-module-quizz-3.png"
+        style="position: fixed; z-index: 5; width: 195px; height: 55px; margin-left: 110px; margin-top: 540px">
+
+    <main class="container-fluid d-flex justify-content-center my-3 mx-auto">
+        <section style="margin: 25px 10px 10px 10px">
+            <h1 class="poppins-light" style="font-size: 25px;margin-left: 450px">UpColors - Modulo 1</h1>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #ff8f43;border-radius: 45px; height: 85px; width: 85px; padding: 15px 15px 15px 15px; font-weight: 500; margin-left: 120px; margin-top: 80px">
+                    vowel sound</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #fc6045;border-radius: 85px; height: 140px; width: 140px; padding: 15px 15px 15px 15px; font-weight: 500; margin-left: 300px; margin-top: -95px">
+                    Consonant Sounds</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #f93047;border-radius: 85px; height: 105px; width: 105px; padding: 15px 15px 15px 15px; font-weight: 500; margin-left: 620px; margin-top: -205px;">
+                    let’s say hello!</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #f60046;border-radius: 85px; height: 95px; width: 95px; padding: 15px 15px 15px 15px; font-weight: 500; margin-left: 710px; margin-top: -55px">
+                    spelling bee!</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #d20052;border-radius: 85px; height: 105px; width: 105px; padding: 15px 15px 15px 15px; font-weight: 500; margin-left: 805px; margin-top: -150px">
+                    animals & colors</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #ad005c;border-radius: 85px; height: 105px; width: 105px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 20px; margin-top: 60px">
+                    parts of the body</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #890056;border-radius: 85px; height: 95px; width: 95px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 225px; margin-top: -85px">
+                    where are you from?</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #72007e;border-radius: 85px; height: 95px; width: 95px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 355px; margin-top: -55px">
+                    family & friends</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #5b0097;border-radius: 95px; height: 185px; width: 185px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 495px; margin-top: -165px; position: absolute; z-index: 20">
+                    professions & occupations</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #4400af;border-radius: 85px; height: 140px; width: 140px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 680px; margin-top: -85px;">
+                    personality traits</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #602cdd;border-radius: 125px; height: 205px; width: 205px; padding: 15px 15px 15px 15px; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 815px; margin-top: -215px;">
+                    my favorite food and drinks</p>
+            </div>
+            <div class="movable-card">
+                <p class="poppins-light text-center"
+                    style="background: #7b57ea; border-radius: 85px; height: 140px; width: 140px; padding: 0; font-weight: 500; display: flex; align-items: center; justify-content: center; margin-left: 980px; margin-top: -130px;">
+                    fruit and vegetables
+                </p>
+            </div>
+        </section>
+    </main>
+</html>
