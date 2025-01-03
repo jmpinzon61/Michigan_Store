@@ -3,6 +3,16 @@
     color: white;
 }
 
+.bg-main-class {
+    background: linear-gradient(180deg, #0c0434, #2b2c7b,#0c0434);
+    color: white;
+}
+
+.bg-main-quizzes {
+    background: linear-gradient(90deg, #3d00a0,#3d00a0,#3d00a0, #220167,#3d00a0);
+    color: white;
+}
+
 .bg-card-purple {
     background-color: #8044FF;
     color: white;
@@ -34,25 +44,69 @@
     cursor: pointer;
 }
 
-.poppins-light {
-    font-family: 'Poppins', sans-serif;
+@font-face {
+    font-family: 'Champ';
+    src: url('../fonticon/Champ-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Champ';
+    src: url('../fonticon/Champ-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Champ';
+    src: url('../fonticon/Champ-Light.otf') format('opentype');
     font-weight: 300;
 }
 
-.champ-semibold {
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonticon/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonticon/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonticon/Poppins-LightItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+.champ-extrabold {
     font-family: 'Champ', sans-serif;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .champ-bold {
     font-family: 'Champ', sans-serif;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .champ-light {
     font-family: 'Champ', sans-serif;
     font-weight: 300;
 }
+
+.poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
 
 /* Movil */
 .gradient-custom {
