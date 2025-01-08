@@ -16,9 +16,56 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="templates\css\styles.css">
+  <style>
+    .card-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .name-img {
+      position: absolute;
+      z-index: 2;
+      margin-top: 170px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 10;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 85%;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      box-sizing: border-box;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 100%;
+    }
+
+    .course-card:hover .overlay {
+      transition: opacity 1s ease-in-out;
+    }
+
+    .overlay::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
 </head>
 
-<body class="bg-main-purple">
+<body class="bg-main-purple" style="overflow-x: hidden">
 
   <!-- Navbar -->
   <header class="container d-flex justify-content-between align-items-center py-4"
@@ -29,11 +76,16 @@
     <div class="d-none d-block d-lg-block">
       <nav class="d-flex justify-content-between align-items-center"
         style="max-width: 100%; margin-right: -800px; margin-top: -30px; padding-left: 47px">
-        <a href="./inicio.html" class="text-white mx-4 p-3 poppins-bold" style="font-size: 17px; text-decoration: none">Inicio</a>
-        <a href="./cursos.html" class="text-white mx-4 p-3 poppins-bold" style="font-size: 17px; text-decoration: none">Cursos</a>
-        <a href="./precios.html" class="text-white mx-4 p-3 poppins-bold" style="font-size: 17px; text-decoration: none">Precios</a>
-        <a href="./nosotros.html" class="text-white mx-4 p-3 poppins-bold" style="font-size: 17px; text-decoration: none">Nosotros</a>
-        <a href="./blogs.html" class="text-white mx-4 p-3 poppins-bold" style="font-size: 17px; text-decoration: none">Blogs</a>
+        <a href="./inicio.html" class="text-white mx-4 p-3 poppins-bold"
+          style="font-size: 17px; text-decoration: none">Inicio</a>
+        <a href="./cursos.html" class="text-white mx-4 p-3 poppins-bold"
+          style="font-size: 17px; text-decoration: none">Cursos</a>
+        <a href="./precios.html" class="text-white mx-4 p-3 poppins-bold"
+          style="font-size: 17px; text-decoration: none">Precios</a>
+        <a href="./nosotros.html" class="text-white mx-4 p-3 poppins-bold"
+          style="font-size: 17px; text-decoration: none">Nosotros</a>
+        <a href="./blogs.html" class="text-white mx-4 p-3 poppins-bold"
+          style="font-size: 17px; text-decoration: none">Blogs</a>
       </nav>
     </div>
     <!-- Nav in Movil-->
@@ -75,9 +127,8 @@
   </header>
 
   <!-- Contenido de la sección de Cursos -->
-  <main class="container-fluid my-5" style="overflow-x: hidden">
+  <main class="container-fluid my-5">
     <section class="hero-section-cursos">
-      <br>
       <div id="theCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicadores -->
         <ol class="carousel-indicators" style="visibility: hidden">
@@ -1452,13 +1503,11 @@
             </div>
           </div>
           <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
-            <span class="fa-solid fa-chevron-left" style="margin-top: 20px; margin-left: 1px; font-size: 14px;"
-              aria-hidden="true"></span>
+            <span class="fa-solid fa-chevron-left" style="font-size: 14px;" aria-hidden="true"></span>
             <span class="sr-only">anterior</span>
           </a>
           <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
-            <span class="fa-solid fa-chevron-right" style="margin-top: 20px; margin-left: 1px; font-size: 14px;"
-              aria-hidden="true"></span>
+            <span class="fa-solid fa-chevron-right" style="font-size: 14px;" aria-hidden="true"></span>
             <span class="sr-only">siguiente</span>
           </a>
         </div>
@@ -1466,9 +1515,9 @@
     </section>
 
     <section class="other-courses">
-      <div class="d-flex flex-column justify-content-center align-itemns-center" style="margin-left: 85px">
-        <div class="col-12">
-          <h2 class="champ-bold" style="color: #7955f8; transform: translateY(-40px)">otros cursos</h2>
+      <div class="d-flex flex-column justify-content-center align-itemns-center" style="margin-left: 85px; height: 1750px;">
+        <div class="col-12" style="margin-bottom: 75px">
+          <h2 class="champ-bold" style="color: #7955f8;  margin-top: -40px;">otros cursos</h2>
         </div>
         <div class="col">
           <div class="courses-list" style="transform: translateY(-35px)">
@@ -1480,6 +1529,13 @@
               <img src="imagenes\Vector (4).png"
                 style="height: 33px; width: 89px; position: relative; z-index: 1; margin-left: -60px; margin-top: 170px; transform: translateX(-85px);"
                 alt="Card 1">
+              <div class="overlay"
+                style="background: linear-gradient(180deg, #0cd7ed, #0708f3);padding: 105px 25px 25px 25px;">
+                <p class="poppins-light fs-5">
+                  Diseñado para niños en la primera infancia, este programa ilustrado
+                  y colorido actúa como una guía divertida para crear bases comunicativas
+                  sólidas mientras disfrutan del proceso de aprendizaje del idioma.</p>
+              </div>
             </div>
             <div class="course-card" style="position: relative; z-index: 2">
               <img src="imagenes\Card_2.png" style="height: 234px; width: 197px; margin-left: 162px" alt="Card 2">
@@ -1489,9 +1545,18 @@
               <img src="imagenes\Union (7).png"
                 style="height: 33px; width: 99px; position: relative; z-index: 1; margin-left: -60px; margin-top: 174px; transform: translateX(-150px);"
                 alt="Card 2">
+              <div class="overlay"
+                style="background: linear-gradient(180deg, #b11fe5, #8700dc);padding: 205px 25px 25px 25px;">
+                <p class="poppins-light fs-5">
+                  Es una experiencia de aprendizaje colorida que se desarrolla a través
+                  de "situaciones comunicativas", desde hacer check-in en un hotel hasta
+                  discutir arte e historia. Este programa de 3 módulos
+                  (Primary, Secondary y Tertiary) ofrece una experiencia educativa única
+                  y vibrante.</p>
+              </div>
             </div>
             <div class="course-card" style="position: relative; z-index: 3">
-              <img src="imagenes\Card_3.png" style="border-radius: 45px; height: 244px; width: 157px; margin-left: 40px"
+              <img src="imagenes\Card_3.png" style="border-radius: 45px; height: 285px; width: 180px; margin-left: 45px"
                 alt="Card 3">
               <img src="svg\Card_3.svg"
                 style="height: 43px; width: 99px; position: relative; z-index: 2; margin-left: -30px; margin-top: 170px; transform: translateX(-90px)"
@@ -1499,9 +1564,18 @@
               <img src="imagenes\Capa 3.png"
                 style="height: 43px; width: 99px; position: relative; z-index: 1; margin-left: -83px; margin-top: 170px; transform: translateX(-95px);"
                 alt="Card 3">
+              <div class="overlay"
+                style="background: linear-gradient(180deg,  #6df1cc, #01ddd2);padding: 195px 25px 25px 25px;">
+                <p class="poppins-light fs-5">
+                  En este programa se exploran los secretos de los tiempos
+                  verbales en inglés a través de un enfoque teórico. Compuesto
+                  por 13 video sessions distribuidas en 5 módulos, brinda una
+                  visión más profunda y estructurada para construir una base
+                  sólida en la gramática inglesa.</p>
+              </div>
             </div>
             <div class="course-card" style="position: relative; z-index: 4">
-              <img src="imagenes\Card_4.png" style="height: 234px; width: 157px; margin-left: -52px; margin-top: 50px"
+              <img src="imagenes\Card_4.png" style="height: 234px; width: 157px; margin-left: -20px; margin-top: 50px"
                 alt="Card 4">
               <img src="svg\Card_4.svg"
                 style="height: 93px; width: 130px; position: relative; z-index: 2; margin-left: -100px; margin-top: 210px; transform: translateX(-40px)"
@@ -1509,9 +1583,17 @@
               <img src="imagenes\Vector (5).png"
                 style="height: 23px; width: 130px; position: relative; z-index: 1; margin-left: -115px; margin-top: 210px; transform: translateX(-55px);"
                 alt="Card 4">
+              <div class="overlay"
+                style="background: linear-gradient(180deg, #ffd026, #fd9d1d);padding: 175px 25px 25px 25px;">
+                <p class="poppins-light fs-5">
+                  Para aquellos sin experiencia en inglés, este programa se centra en la
+                  comprensión y pronunciación básica. Con 19 sesiones de video, proporciona
+                  un punto de partida sólido para los principiantes, explorando el vocabulario
+                  y las estructuras gramaticales esenciales.</p>
+              </div>
             </div>
             <div class="course-card" style="position: relative; z-index: 1">
-              <img src="imagenes\Card_5.png" style="height: 264px; width: 197px; margin-left: -255px; margin-top: 10px"
+              <img src="imagenes\Card_5.png" style="height: 264px; width: 197px; margin-left: -220px; margin-top: 10px"
                 alt="Card 5">
               <img src="svg\Card_5.svg"
                 style="height: 33px; width: 79px; position: relative; z-index: 2; margin-left: -30px; margin-top: 210px; transform: translateX(-105px)"
@@ -1519,12 +1601,24 @@
               <img src="imagenes\Vector (6).png"
                 style="height: 33px; width: 79px; position: relative; z-index: 1; margin-left: -90px; margin-top: 210px; transform: translateX(-95px);"
                 alt="Card 5">
+              <div class="overlay"
+                style="background: linear-gradient(180deg, #ff2855, #ffcddf); padding: 295px 25px 25px 25px;">
+                <p class="poppins-light fs-5">
+                  Con 4 niveles (A1, A2, B1 y B2), este programa cuenta con un enfoque
+                  comunicativo. A través de conversaciones de la vida diaria, brinda la
+                  posibilidad de familiarizarse con el uso real de la lengua. Abroad
+                  ofrece una serie de herramientas para desarrollar habilidades de
+                  producción oral y escrita prestando especial atención a los rasgos
+                  fonéticos de la lengua y a la importancia de la autoevaluación en
+                  el proceso de aprendizaje.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
+    </section>
+    
     <section class="test-section">
       <div class="d-flex flex-row justify-content-center align-items-center">
         <div class="col-10" style="height: 295px; transform: translateX(145px)">
@@ -1674,6 +1768,34 @@
   </a>
   <script src="templates\js\scroll.js"></script>
   <script src="templates/js/scroll-button.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".left.carousel-control, .right.carousel-control").hover(
+        function () {
+          $(this).css({ transform: "rotateY(360deg) scale(1.2)" });
+        },
+        function () {
+          $(this).css({ transform: "rotateY(0deg) scale(1)" });
+        }
+      );
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".course-card").hover(
+        function () {
+          $(this).find(".overlay").stop().css("display", "flex").animate({ height: "100%", opacity: 1 }, 500);
+        },
+        function () {
+          $(this).find(".overlay").stop().animate({ height: "0", opacity: 0 }, 500, function () {
+            $(this).css("display", "none");
+          });
+        }
+      );
+    });
+
+  </script>
 </body>
 
 </html>
