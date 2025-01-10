@@ -228,10 +228,7 @@
 }
 
 /* Section-Inicio */
-body {
-    background-color: #2a0d51;
-    color: #fff;
-}
+
 
 .hero-section {
     text-align: center;
@@ -597,11 +594,6 @@ body {
 }
 
 /* Section-Cursos */
-.main {
-    background-color: #111;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-}
 
 .hero-section-cursos {
     text-align: center;
@@ -677,13 +669,13 @@ body {
 }
 
 .test-section {
+    position: relative;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: -1385px;
     background-image: url("/imagenes/Section test.png");
     height: 100%;
     width: 100vw;
-    top: 0px;
-    padding: 0px;
+    margin-bottom: 85px;
 }
 
 .rules {

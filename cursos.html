@@ -13,8 +13,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
   <link rel="stylesheet" href="templates\css\styles.css">
   <style>
     .card-image {
@@ -62,29 +62,79 @@
     .overlay::-webkit-scrollbar {
       display: none;
     }
+
+    .modal-content {
+      margin-top: auto;
+      max-height: 350px;
+      max-width: 550px;
+      height: 375px;
+      width: 375px;
+      background-color: #351C76;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      border: 2px solid #ffffff;
+    }
+
+    .modal-header {
+      border-bottom: none;
+      color: white;
+    }
+
+    .modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      justify-content: center;
+    }
+
+
+    .modal-body video {
+      pointer-events: auto;
+      border-radius: 10px;
+      border: 3px solid #ff9d00;
+      background-color: black;
+    }
+
+    .modal {
+      z-index: 2500px !important;
+      opacity: 1 !important;
+      pointer-events: auto;
+    }
+
+    .modal-backdrop {
+      z-index: 2500px !important;
+    }
+
+    .carousel {
+      overflow-y: hidden !important;
+      z-index: 1050 !important;
+      overflow-y: hidden;
+      pointer-events: auto;
+    }
+
   </style>
 </head>
 
-<body class="bg-main-purple" style="overflow-x: hidden">
+<body class="bg-main-purple" style="overflow-x: hidden !important">
 
   <!-- Navbar -->
   <header class="container d-flex justify-content-between align-items-center py-4"
     style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px;">
-    <h1 class="champ-bold" style="margin: 0 0 0 -16px;margin-top: -45px; font-size: 18px">Michigan's</h1>
-    <h1 class="champ-bold" style="margin: 0 0 0 -85px; font-size: 18px">Store</h1>
+    <h1 class="champ-bold" style="margin: 0 0 0 -10px;margin-top: -45px; font-size: 18px">Michigan's</h1>
+    <h1 class="champ-bold" style="margin: 0 0 0 -75px; font-size: 18px">Store</h1>
     <!-- Nav in PC-->
     <div class="d-none d-block d-lg-block">
       <nav class="d-flex justify-content-between align-items-center"
-        style="max-width: 100%; margin-right: -800px; margin-top: -30px; padding-left: 47px">
-        <a href="./inicio.html" class="text-white mx-4 p-3 poppins-bold"
+        style="max-width: 100%; margin-right: 415px; margin-top: -30px; gap: 18px; padding-left: 51px;">
+        <a href="./inicio.html" class="text-white mx-4 poppins-bold enlace"
           style="font-size: 17px; text-decoration: none">Inicio</a>
-        <a href="./cursos.html" class="text-white mx-4 p-3 poppins-bold"
+        <a href="./cursos.html" class="text-white mx-4 poppins-bold enlace"
           style="font-size: 17px; text-decoration: none">Cursos</a>
-        <a href="./precios.html" class="text-white mx-4 p-3 poppins-bold"
+        <a href="./precios.html" class="text-white mx-4 poppins-bold enlace"
           style="font-size: 17px; text-decoration: none">Precios</a>
-        <a href="./nosotros.html" class="text-white mx-4 p-3 poppins-bold"
+        <a href="./nosotros.html" class="text-white mx-4 poppins-bold enlace"
           style="font-size: 17px; text-decoration: none">Nosotros</a>
-        <a href="./blogs.html" class="text-white mx-4 p-3 poppins-bold"
+        <a href="./blogs.html" class="text-white mx-4 poppins-bold enlace"
           style="font-size: 17px; text-decoration: none">Blogs</a>
       </nav>
     </div>
@@ -101,9 +151,9 @@
         </div>
       </nav>
     </div>
-    <div class="dropdown d-flex align-items-center" style="margin-top: -35px; margin-left: 1100px">
-      <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
-        data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+    <div class="dropdown d-flex align-items-center" style="margin-top: -35px; margin-left: 107px">
+      <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-3" width="50" height="50"
+        data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer">
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
             style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a></li>
@@ -113,10 +163,10 @@
         <li><a class="dropdown-item text-white poppins-light" href="#"
             style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a></li>
       </ul>
-      <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-2 mx-2"
-        style="height: 40px; width: 40px;">
+      <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
+        style="height: 50px; width: 50px;">
         <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
-          style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px; font-size: 30px"></i>
+          style="cursor: pointer; background-color: #a19aac; display: flex; padding: 10px; border-radius: 25px; font-size: 30px;"></i>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item text-white poppins-light mb-2" href=""
               style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
@@ -138,9 +188,9 @@
           <li data-target="#theCarousel" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-          <div class="item">
+          <div class="item active">
             <img src="imagenes\UPCOLORS 1.png" alt="Ilustracion 1">
-            <p class="description poppins-light text-start" style="transform: translateY(-225px); margin-left: 290px">
+            <p class="description poppins-light text-start" style="transform: translateY(-225px); margin-left: 288px">
               Con un enfoque comunicativo clave, este programa explora la comunicación contextualizada en situaciones
               reales,
               introduciendo temas de fonética básica. Los 40 sesiones de video divididas en 4 módulos construyen
@@ -149,12 +199,274 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-67px);margin-left: -145px"><img
-                  src="svg\UpColors.svg" style="vertical-align: middle; margin-left: -455px" alt="Name"></h1>
+                  src="svg\UpColors.svg" style="vertical-align: middle; margin-left: -445px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
-                style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
+                style="font-size: 18px; margin-right: 950px; transform: translateY(20px)" data-bs-toggle="modal"
+                data-bs-target="#VerAhora">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
                   style="margin-top: -40px; margin-left: 20px;">ver ahora</a>
               </button>
+              <div class="modal fade" id="VerAhora" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true"
+                style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Videos interactivos-->
+              <div class="modal fade" id="VerAhora-1" tabindex="-1" aria-labelledby="VerAhora-1"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel3">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="VerAhora2" tabindex="-1" aria-labelledby="videoModalLabel-2"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel1">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora3" tabindex="-1" aria-labelledby="videoModalLabel-3"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel2">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora4" tabindex="-1" aria-labelledby="videoModalLabel-4"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel3">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="VerAhora5" tabindex="-1" aria-labelledby="videoModalLabel-5"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel1">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora6" tabindex="-1" aria-labelledby="videoModalLabel-6"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel2">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora7" tabindex="-1" aria-labelledby="videoModalLabel-7"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel3">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="VerAhora8" tabindex="-1" aria-labelledby="videoModalLabel-8"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel1">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora9" tabindex="-1" aria-labelledby="videoModalLabel-9"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel2">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora10" tabindex="-1" aria-labelledby="videoModalLabel-10"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel3">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="VerAhora11" tabindex="-1" aria-labelledby="videoModalLabel-11"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel1">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora12" tabindex="-1" aria-labelledby="videoModalLabel12"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel2">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="VerAhora13" tabindex="-1" aria-labelledby="videoModalLabel13"
+                aria-hidden="true" style="overflow-y: hidden !important">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title poppins-light" id="videoModalLabel3">Content</h5>
+                      <button type="button" class="btn-close"
+                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <video width="320" height="240" autoplay="autoplay" controls="controls">
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
+                      </VerAhora1>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="course-info">
                 <div class="info-item" style="width: 345px; height: 120px">
                   <p class="poppins-light text-center"
@@ -196,18 +508,19 @@
                   </div>
                 </div>
                 <div class="card"
-                  style="width: 505px; height: 120px; background-color: #443D5D; border-radius: 10px; overflow: hidden;">
-                  <div class="scroll-container d-flex flex-row content justify-content-start flex-row gap-2 "
-                    style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)">
-                    <div oncontextmenu="return false">
-                      <img src="imagenes\optic.png"
+                  style="width: 505px; height: 120px; background-color: #443D5D; border-radius: 10px; overflow: hidden; pointer-events: auto;">
+                  <div
+                    class="scroll-container d-flex flex-row content justify-content-start flex-row gap-2 interactive-container"
+                    style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)" data-bs-toggle="modal" data-bs-target="#VerAhora-1">
+                    <div style="pointer-events: auto;" oncontextmenu="return false">
+                      <img src="imagenes/optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 1">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
-                      <p style="margin-top: -40px; font-size: 12px; position: relative; z-index: 999px">Vowel</p>
-                      <p style="margin-top: -15px; font-size: 12px; position: relative; z-index: 999px">sound</p>
-                      <img src="imagenes\Color_1.png"
+                      <p style="margin-top: -40px; font-size: 12px">Vowel</p>
+                      <p style="margin-top: -15px; font-size: 12px">sound</p>
+                      <img src="imagenes/Color_1.png"
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_1">
                     </div>
@@ -375,7 +688,7 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-67px);margin-left: -145px"><img
-                  src="svg\Prismatic.svg" style="vertical-align: middle; margin-left: -455px" alt="Name"></h1>
+                  src="svg\Prismatic.svg" style="vertical-align: middle; margin-left: -435px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
                 style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
@@ -425,9 +738,10 @@
                   style="width: 505px; height: 120px; background-color: #443D5D; border-radius: 10px; overflow: hidden;">
                   <div class="scroll-container d-flex flex-row content justify-content-start flex-row gap-2 "
                     style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)">
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 1">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora1" alt="Eye 1">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -437,9 +751,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_1">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 2">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora2" alt="Eye 2">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -449,9 +764,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_2">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 3">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora3" alt="Eye 3">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -461,9 +777,10 @@
                         style="margin-top: -114px; height:  85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_3">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 4">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora4" alt="Eye 4">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -473,9 +790,10 @@
                         style="margin-top: -114px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_4">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 5">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora5" alt="Eye 5">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -485,9 +803,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_5">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 6">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora6" alt="Eye 6">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -497,9 +816,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_6">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 7">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora7" alt="Eye 7">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -509,9 +829,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_7">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 8">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora8" alt="Eye 8">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -521,9 +842,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_8">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 9">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora9" alt="Eye 9">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -534,9 +856,10 @@
                         style="margin-top: -115px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_9">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 10">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora10" alt="Eye 10">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -546,9 +869,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_10">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 11">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora11" alt="Eye 11">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -558,11 +882,12 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_11">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <!--Desabilita que el usaurio guarde las imagenes ayudando en derechos de autor-->
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px; user-select: none; pointer-events: none;"
-                        draggable="false" ondragstart="return false;" alt="Eye 12">
+                        draggable="false" ondragstart="return false;" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora12" alt="Eye 12">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -572,9 +897,10 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_12">
                     </div>
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false"  style="pointer-events: auto">
                       <img src="imagenes\optic.png"
-                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 11">
+                        style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
+                        data-bs-target="#VerAhora13" alt="Eye 11">
                       <div class="d-flex"
                         style="border-bottom: 1px solid #ffffff; margin-left: 45px; width: 60px; transform: translateY(-40px); margin-left: 7px;">
                       </div>
@@ -601,7 +927,7 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-67px); margin-left: -145px"><img
-                  src="svg\Fundamentals.svg" style="vertical-align: middle; margin-left: -420px" alt="Name"></h1>
+                  src="svg\Fundamentals.svg" style="vertical-align: middle; margin-left: -405px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
                 style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
@@ -661,7 +987,7 @@
                       <p style="margin-top: -15px; font-size: 12px; position: relative; z-index: 999px">sound</p>
                       <img src="imagenes\Color_1.png"
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
-                        alt="Tono_1">
+                        alt="Tono_1" data-bs-toggle="modal" data-bs-target="#VerAhora-1">
                     </div>
                     <div oncontextmenu="return false">
                       <img src="imagenes\optic.png"
@@ -827,7 +1153,7 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-120px); margin-left: -145px"><img
-                  src="svg\Abroad.svg" style="vertical-align: middle; margin-left: -465px" alt="Name"></h1>
+                  src="svg\Abroad.svg" style="vertical-align: middle; margin-left: -455px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
                 style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
@@ -877,7 +1203,7 @@
                   style="width: 505px; height: 120px; background-color: #443D5D; border-radius: 10px; overflow: hidden;">
                   <div class="scroll-container d-flex flex-row content justify-content-start flex-row gap-2 "
                     style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)">
-                    <div oncontextmenu="return false">
+                    <div oncontextmenu="return false" data-bs-toggle="modal" data-bs-target="#VerAhora">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 1">
                       <div class="d-flex"
@@ -1052,7 +1378,7 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-70px); margin-left: -145px"><img
-                  src="svg\Explorers.svg" style="vertical-align: middle; margin-left: -422px" alt="Name"></h1>
+                  src="svg\Explorers.svg" style="vertical-align: middle; margin-left: -405px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
                 style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
@@ -1266,7 +1592,7 @@
               </div>
             </div>
           </div>
-          <div class="item active">
+          <div class="item">
             <img src="imagenes\PORTADAS PRODUCTOS WEB_upcolors.png" alt="Ilustracion 6">
             <p class="description poppins-light text-start" style="transform: translateY(-220px); margin-left: 290px">
               Diseñado para niños en la primera infancia, este
@@ -1276,7 +1602,7 @@
             </p>
             <div class="carousel-caption d-none d-md-block">
               <h1 class="champ-bold" style="transform: translateY(-47px); margin-left: -145px"><img src="svg\Kids.svg"
-                  style="vertical-align: middle; margin-left: -575px" alt="Name"></h1>
+                  style="vertical-align: middle; margin-left: -555px" alt="Name"></h1>
               <button class="btn-primary poppins-light"
                 style="font-size: 18px; margin-right: 950px; transform: translateY(20px)">
                 <img src="svg\Vector 616.svg" style="margin-left: -8px; margin-top: -4px"></img><a
@@ -1515,7 +1841,8 @@
     </section>
 
     <section class="other-courses">
-      <div class="d-flex flex-column justify-content-center align-itemns-center" style="margin-left: 85px; height: 1750px;">
+      <div class="d-flex flex-column justify-content-center align-itemns-center"
+        style="margin-left: 85px; height: 1750px;">
         <div class="col-12" style="margin-bottom: 75px">
           <h2 class="champ-bold" style="color: #7955f8;  margin-top: -40px;">otros cursos</h2>
         </div>
@@ -1618,7 +1945,7 @@
       </div>
 
     </section>
-    
+
     <section class="test-section">
       <div class="d-flex flex-row justify-content-center align-items-center">
         <div class="col-10" style="height: 295px; transform: translateX(145px)">
@@ -1641,11 +1968,13 @@
             <p class="fas fa-check" style="font-size: 10px; color:#FF3E62"><span class="poppins-light text-white"
                 style="font-size: 14px; margin-left: 7px;">Regla 4</span></p>
           </ol>
-          <button type="submit" class="btn btn-test text-white"
-            style="cursor: pointer; font-size: 20px; transform: translateY(-110px); margin-left: 435px; height: 50px; width: 315px"
-            id="toggleButton" data-state="plane">
-            Realizar Test
-          </button>
+          <a href="./content-quiz-module.html">
+            <button type="submit" class="btn btn-test text-white"
+              style="cursor: pointer; font-size: 20px; transform: translateY(-110px); margin-left: 435px; height: 50px; width: 315px"
+              id="toggleButton" data-state="plane">
+              Realizar Test
+            </button>
+          </a>
         </div>
       </div>
     </section>
@@ -1660,43 +1989,43 @@
                 Store</span></h3>
           </div>
           <div class="col-5" style="margin-top: 100px">
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-1.png" alt="Wait 1">
-            <p class="text-start" style="height: 35px; width: 275px">Diversidad de experiencias
+            <p class="text-start poppins-light" style="height: 35px; width: 275px">Diversidad de experiencias
               Según tu necesidad, encuentra el curso que se adapte a tu edad y expectativa en nuestra amplia gama de
               opciones.
               Enfoques comunicativos</p>
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-2.png" alt="Wait 2">
-            <p class="text-start" style="height: 35px; width: 275px">Enfoques comunicativos
+            <p class="text-start poppins-light" style="height: 35px; width: 275px">Enfoques comunicativos
               Nuestro enfoque esta diseñado en promover y fortalecer la comunicación en ingles, haciendo que el usuario
               hable de forma rápida en este idioma
             </p>
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-3.png" alt="Wait 3">
-            <p class="text-start" style="height: 35px; width: 275px">No te quedes con la duda
+            <p class="text-start poppins-light" style="height: 85px; width: 275px">No te quedes con la duda
               Agenda tus clases virtuales
               semi -personalizadas, úsalas para resolver tus dudas, profundizar en el tema de tu interés.</p>
             <div class="d-flex"
-              style="border-bottom: 2px solid #9292ff; margin-left: 200px; width: 330px; transform: translateY(-135px) rotate(90deg)">
+              style="border-bottom: 2px solid #9292ff; margin-left: 200px; width: 330px; transform: translateY(-165px) rotate(90deg)">
             </div>
           </div>
           <div class="col-5" style="margin-top: 100px; transform: translateX(125px)">
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-4.png" alt="Wait 4">
-            <p class="text-start" style="height: 35px; width: 275px">Experiencias Inmersivas
+            <p class="text-start poppins-light" style="height: 35px; width: 275px">Experiencias Inmersivas
               Simula escenarios del día a día para que practiques tus habilidades, pierdas el miedo y fortalezcas tu
               confianza al hablar.</p>
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-5.png" alt="Wait 5">
-            <p class="text-start" style="height: 35px; width: 275px">Profesores de distintas
+            <p class="text-start poppins-light" style="height: 85px; width: 275px">Profesores de distintas
               partes del mundo
               Al interactuar con profesores expertos de diferentes países, ampliarás tu perspectiva global y ganarás una
               comprensión mayor de las diversas culturas y costumbres que se entrelazan con el aprendizaje del inglés.
             </p>
-            <img style="height: 100px; width: 125px; transform: translateY(95px); margin-left: -650px"
+            <img style="height: 100px; width: 105px; transform: translateY(95px); margin-left: -650px"
               src="/imagenes/wait-6.png" alt="Wait 6">
-            <p class="text-start" style="height: 35px; width: 275px">
+            <p class="text-start poppins-light" style="height: 35px; width: 275px">
               Aprende a tu ritmo
               Disfruta aprendiendo desde cualquier lugar del mundo, sin horarios y a tu ritmo, tú decides cuándo seguir
               con el siguiente tema.
@@ -1794,7 +2123,6 @@
         }
       );
     });
-
   </script>
 </body>
 
