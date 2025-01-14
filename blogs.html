@@ -74,12 +74,51 @@
         }
 
         .enlace.activo::after {
-            width: 100%;
+            width: 450px;
+        }
+
+        p {
+            max-height: 105px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: relative;
+            transition: max-height 0.5s ease;
+        }
+
+        p.expanded {
+            max-height: 400px;
+            overflow-y: auto;
+            bottom: 0;
+        }
+
+        p.with-gradient {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        p.with-gradient::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        p.with-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: 0 !important;
+            left: 0;
+            width: 450px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, rgba(156, 34, 34, 0.5));
+            pointer-events: none;
+        }
+
+        p.expanded.with-gradient::after {
+            display: none;
         }
     </style>
 </head>
 
-<body class="bg-main-purple">
+<body class="bg-main-purple" style="overflow-x: hidden !important">
 
     <!-- Navbar -->
     <header class="container d-flex justify-content-between align-items-center py-3"
@@ -157,7 +196,8 @@
                 <div class="col-6">
                     <h2 class="title poppins-bold text-start">Traemos algunos tips, Métodos que mejor se adaptan a ti.
                     </h2>
-                    <p class="descrption poppins-light text-start">Lorem ipsum dolor sit amet, consectetuer
+                    <p id="description-1" class="descrption poppins-light text-start  with-gradient">Lorem ipsum dolor
+                        sit amet, consectetuer
                         adipiscing elit, sed diam nonummy nibh
                         euismod tincidunt utreet dolore magna
                         aliquam erat volutpat. Ut wisi enim ad im
@@ -170,7 +210,8 @@
                         iusto odio dignissim qui blandit prent luptatum
                         zzril delenit ague duis dolore te feugait
                         nulla facilisi.</p>
-                    <a href="#" class="btn btn-primary-learning p-3 poppins-bold" style="margin-right: -130px">Seguir
+                    <a href="#" id="read-more-1" class="btn btn-primary-learning p-3 poppins-bold"
+                        style="margin-right: -130px">Seguir
                         leyendo</a>
                 </div>
             </div>
@@ -188,12 +229,12 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 239px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Tips
                             para aprovechar Michigan’s Store al 100%</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-2" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, coetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
-                            dolore magna aliquam erat volut.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                            dolore magna aliquam erat volut lore.</p>
+                        <a id="read-more-2" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -208,14 +249,14 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 239px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">De cero
                             a expertos en poco tiempo</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-3" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, ectetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
                             dolore magna aliquam erat volutpat.
                             Ut wisi enim ad minim veniam, quis
                             nostrud exerci tation ullamcorper.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-3" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -230,7 +271,7 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 239px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Lorem
                             ipsum</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-4" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, constuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
@@ -238,7 +279,7 @@
                             Ut wisi enim ad minim veniam, quis
                             nostrud exerci tation ullamcorper
                             suscipit lobortis nisl ut aliquip ex ea.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-4" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -253,13 +294,13 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 409px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">
                             Inspírate por medio de vivencias de quienes ya lo lograron...</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-5" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, ectetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
                             dolore magna aliquam erat volutpat.
                             Ut wisi enim ad minim veniam.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-5" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -274,7 +315,7 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 239px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Lorem
                             ipsum</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-6" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, constuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
@@ -282,7 +323,7 @@
                             Ut wisi enim ad minim veniam, quis
                             nostrud exerci tation ullamcorper
                             suscipit lobortis nisl ut aliquip ex ea.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-6" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -297,13 +338,13 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 409px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Traemos
                             algunos tips, organiza tu tiempo y aprende ingles ¡YA!</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-7" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, ectetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
                             dolore magna aliquam erat volutpat.
                             Ut wisi enim ad minim veniam.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-7" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -318,7 +359,7 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 239px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Lorem
                             ipsum</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-8" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, constuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
@@ -326,7 +367,7 @@
                             Ut wisi enim ad minim veniam,
                             quis nostrud exerci tation ullamcorper
                             suscipit lobortis nisl ut aliquip ex ea.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-8" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -341,13 +382,13 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 409px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">
                             Inspírate por medio de vivencias de quienes ya lo lograron...</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-9" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, ectetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
                             dolore magna aliquam erat volutpat.
                             Ut wisi enim ad minim veniam.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-9" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -362,13 +403,13 @@
                         <h5 class="card-title champ-bold text-start"
                             style="width: 409px; color: #7974f5 !important; font-size: 30px; margin-top: -35px">Traemos
                             algunos tips, Métodos que mejor se adaptan a ti.</h5>
-                        <p class="card-text poppins-light text-start">
+                        <p id="description-10" class="card-text poppins-light text-start with-gradient">
                             Lorem ipsum dolor sit amet, ectetuer
                             adipiscing elit, sed diam nonummy
                             nibh euismod tincidunt ut laoreet
                             dolore magna aliquam erat volutpat.
                             Ut wisi enim ad minim veniam.</p>
-                        <a href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
+                        <a id="read-more-10" href="#" class="btn btn-primary-learning-2 p-2 poppins-bold"
                             style="margin-right: -45px">Seguir
                             leyendo</a>
                     </div>
@@ -380,9 +421,9 @@
             <div class="d-flex flex-row justify-content-center align-items-center">
                 <div class="col" style="max-width: 1200px; margin: 0 auto; margin-top: 95px">
                     <p class="text-start poppins-light"
-                        style="height: auto; width: 85px; font-size: 24px; margin-left: 40%">Mostrar</p>
+                        style="height: auto; width: 120px; font-size: 24px; margin-left: 37%">Mostrar</p>
                     <p class="text-start poppins-light"
-                        style="height: auto; width: 85px; font-size: 24px; margin-left: 38%; margin-top: -25px">
+                        style="height: auto; width: 120px; font-size: 24px; margin-left: 35%; margin-top: -25px">
                         contenido</p>
                 </div>
                 <div class="col" style="margin-top: -240px">
@@ -521,7 +562,7 @@
                     <p class="poppins-light" style="font-size: 15px;color: #a9aeeb; margin-left: -50px;">Privacity
                         Policy - Terms & Agreements
                     <p class="poppins-light"
-                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2024 Michigan´s
+                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2025 Michigan's
                         Store</p>
                     <p class="poppins-light"
                         style="font-size: 15px; color: #a9aeeb; margin-top: -15px; margin-left: -2px;">Todos los
@@ -547,7 +588,7 @@
                 <div class="mt-2">
                     <p class="poppins-light" style="color: #a9aeeb;">Privacity Policy - Terms & Agreements</p>
                 </div>
-                <p class="mt-n2 poppins-light" style="font-size: 12px; color: #a9aeeb;">©2024 UpGrade | Todos los
+                <p class="mt-n2 poppins-light" style="font-size: 12px; color: #a9aeeb;">©2025 UpGrade | Todos los
                     derechos reservados
                 </p>
             </div>
@@ -574,6 +615,25 @@
                 }, 999);
             });
         });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a[id^='read-more']").click(function (e) {
+                e.preventDefault();
+
+                const id = $(this).attr("id").split("-")[2];
+                const description = $(`#description-${id}`);
+
+                if (description.hasClass("expanded")) {
+                    description.removeClass("expanded");
+                    $(this).text("Seguir leyendo");
+                } else {
+                    description.addClass("expanded");
+                    $(this).text("Leer menos");
+                }
+            });
+        });        
     </script>
 </body>
 
