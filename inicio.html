@@ -56,7 +56,6 @@
             left: 0;
             width: 100%;
             height: 0;
-            background: linear-gradient(180deg, #FF6B6D, #FF8272);
             color: white;
             text-align: center;
             font-size: 16px;
@@ -75,28 +74,53 @@
             line-height: 1.2;
             margin-top: -8px;
         }
+
+        .modal-content {
+            background-color: #351C76;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #ffffff;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            color: white;
+        }
+
+        .modal-dialog-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .modal-body video {
+            border-radius: 10px;
+            border: 3px solid #ff9d00;
+            background-color: black;
+        }
     </style>
 </head>
 
-<body class="bg-main-purple" style="overflow-x: hidden">
+<body class="bg-main-purple" style="overflow-x: hidden !important">
     <!-- Navbar -->
     <header class="container d-flex justify-content-between align-items-center py-3"
         style="width: 100%; border-bottom: 1px solid #ffffff; margin-top: 30px;">
         <h1 class="champ-bold" style="margin: 0 0 0 -2px;margin-top: -45px; font-size: 18px">Michigan's</h1>
-        <h1 class="champ-bold" style="margin: 0 0 0 -130px; font-size: 18px">Store</h1>
+        <h1 class="champ-bold" style="margin: 0 0 0 -123px; font-size: 18px">Store</h1>
         <!-- Nav in PC-->
         <div class="d-none d-block d-lg-block">
             <nav class="d-flex justify-content-between align-items-center"
                 style="max-width: 100%; margin-right: 470px; margin-top: -30px;">
-                <a href="./inicio.html" class="text-white mx-4 poppins-bold"
+                <a href="./inicio.html" class="text-white mx-4 poppins-bold enlace"
                     style="font-size: 17px; text-decoration: none">Inicio</a>
-                <a href="./cursos.html" class="text-white mx-4 poppins-bold"
+                <a href="./cursos.html" class="text-white mx-4 poppins-bold enlace"
                     style="font-size: 17px; text-decoration: none">Cursos</a>
-                <a href="./precios.html" class="text-white mx-4 poppins-bold"
+                <a href="./precios.html" class="text-white mx-4 poppins-bold enlace"
                     style="font-size: 17px; text-decoration: none">Precios</a>
-                <a href="./nosotros.html" class="text-white mx-4 poppins-bold"
+                <a href="./nosotros.html" class="text-white mx-4 poppins-bold enlace"
                     style="font-size: 17px; text-decoration: none">Nosotros</a>
-                <a href="./blogs.html" class="text-white mx-4 poppins-bold"
+                <a href="./blogs.html" class="text-white mx-4 poppins-bold enlace"
                     style="font-size: 17px; text-decoration: none">Blogs</a>
             </nav>
         </div>
@@ -114,8 +138,8 @@
             </nav>
         </div>
         <div class="dropdown d-flex align-items-center" style="margin-top: -35px;">
-            <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="40" height="40"
-                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+            <img src="imagenes\Ellipse 840.png" alt="User Avatar" class="rounded-circle me-2" width="50" height="50"
+                data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer">
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item text-white poppins-light mb-2" href="#"
                         style="background-color: #7955f8; font-size: small; border-radius: 25px;">Ver perfil</a></li>
@@ -126,9 +150,9 @@
                         style="background-color: #7955f8; font-size: small; border-radius: 25px;">Cerrar sesión</a></li>
             </ul>
             <div class="d-flex fs-3 bg-secondary rounded-circle  text-black  justify-content-center me-3"
-                style="height: 40px; width: 40px;">
+                style="height: 50px; width: 50px;">
                 <i class="text-center  bi-three-dots-vertical" data-bs-toggle="dropdown"
-                    style="cursor: pointer; background-color: #a19aac; display: flex; padding: 6px; border-radius: 25px;"></i>
+                    style="cursor: pointer; background-color: #a19aac; display: flex; padding: 12px; border-radius: 25px;"></i>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item text-white poppins-light mb-2" href=""
                             style="background-color: #7955f8; font-size: small; border-radius: 25px;">Configuración</a>
@@ -174,17 +198,17 @@
                     <h1 style="margin-left: 125px;">Get ready to have a <span
                             style="background: linear-gradient(90deg, #4EB4FF, #FFFFFF, #FAC99F); -webkit-background-clip: text; color: transparent;">
                             great time!</span></h1>
-                    <p style="width: 565px;">¡Conoce Michigan´s Store en un minuto!</p>
+                    <p style="width: 565px;">¡Conoce Michigan's Store en un minuto!</p>
                 </div>
-                <div class="center" style="margin-left: -5px; position: relative; z-index: 999">
+                <div class="center" style="margin-left: -20px; position: relative; z-index: 999">
                     <button id="circle" class="d-flex justify-content-center align-items-center rounded-pill text-white"
-                        style="margin-right: 125px; margin-top: -150px; width: 209px; height: 209px; border-radius: 85px; background-color: #110059; color: #ffffff; border: none;">
+                        style="margin-right: 4px; margin-top: -150px; width: 209px; height: 209px; border-radius: 85px; background-color: #110059; color: #ffffff; border: none;">
                         todos los cursos todos los cursos
                     </button>
                 </div>
                 <div class="banner-image"
                     style="height: 400px; width: 950px; margin-top: -10px; margin-left: -135px; transform: translateX(80px);">
-                    <img src="imagenes/seccion_2.png" alt="Michigan´s Store">
+                    <img src="imagenes/seccion_2.png" alt="Michigan's Store">
                 </div>
             </div>
         </section>
@@ -229,7 +253,7 @@
                             <div class="card-body">
                                 <h5 class="champ-bold text-start" style="font-size: 25px; margin-top: 75px;">Personas
                                     como tú,
-                                    cuentan lo que han logrando estudiando en Michigan´s Store</h5>
+                                    cuentan lo que han logrando estudiando en Michigan's Store</h5>
                                 <p class="card-text poppins-light text-start"
                                     style="padding: 15px; margin-left: -15px; margin-top: -15px; font-size: 15px;">
                                     Conoce como nuestros estudiantes crecen, crean
@@ -248,7 +272,28 @@
                                         alt="Person 1">
                                     <img src="imagenes/_1.png"
                                         style="position: relative; margin-top: -125px; left: 7px; height: 70px; width: 70px;"
-                                        alt="Play 1">
+                                        alt="Play 1" data-bs-toggle="modal" data-bs-target="#modalInicioUno">
+                                    <div class="modal fade" id="modalInicioUno" tabindex="-1"
+                                        aria-labelledby="videoModalLabelQuienesSomos" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title poppins-light"
+                                                        id="videoModalLabelQuienesSomos">Content</h5>
+                                                    <button type="button" class="btn-close"
+                                                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video width="100%" height="400" controls>
+                                                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"
+                                                            type="video/mp4">
+                                                        Tu navegador no soporta la reproducción de video.
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-custom_4">
@@ -258,7 +303,28 @@
                                         alt="Person 2">
                                     <img src="imagenes/_2.png"
                                         style="position: relative; margin-top: -125px; left: -8px; height: 70px; width: 70px;"
-                                        alt="Play 2">
+                                        alt="Play 2" data-bs-toggle="modal" data-bs-target="#modalInicioDos">
+                                    <div class="modal fade" id="modalInicioDos" tabindex="-1"
+                                        aria-labelledby="videoModalLabelQuienesSomos" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title poppins-light"
+                                                        id="videoModalLabelQuienesSomos">Content</h5>
+                                                    <button type="button" class="btn-close"
+                                                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video width="100%" height="400" controls>
+                                                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"
+                                                            type="video/mp4">
+                                                        Tu navegador no soporta la reproducción de video.
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-custom_5">
@@ -268,7 +334,28 @@
                                         alt="Person 3">
                                     <img src="imagenes/_3.png"
                                         style="position: relative; margin-top: -125px; left: 9px; height: 70px; width: 70px;"
-                                        alt="Play 3">
+                                        alt="Play 3" data-bs-toggle="modal" data-bs-target="#modalInicioTres">
+                                    <div class="modal fade" id="modalInicioTres" tabindex="-1"
+                                        aria-labelledby="videoModalLabelQuienesSomos" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title poppins-light"
+                                                        id="videoModalLabelQuienesSomos">Content</h5>
+                                                    <button type="button" class="btn-close"
+                                                        style="background-color: #5a3fc9;box-shadow: none; font-weight: 700;"
+                                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video width="100%" height="400" controls>
+                                                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"
+                                                            type="video/mp4">
+                                                        Tu navegador no soporta la reproducción de video.
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -281,10 +368,14 @@
                             <img src="imagenes/C1.png"
                                 style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
                                 alt="Card-course_1">
-                            <div class="overlay"><p class="poppins-light">Es una experiencia de aprendizaje colorida que se desarrolla a través
-                                de "situaciones comunicativas", desde hacer check-in en un hotel hasta discutir arte e
-                                historia. Este programa de 3 módulos (Primary, Secondary y Tertiary) ofrece una
-                                experiencia educativa única y vibrante.</p></div>
+                            <div class="overlay" style="background: linear-gradient(180deg, #de59f1, #9306dd);">
+                                <p class="poppins-light">Es una experiencia de aprendizaje colorida que se desarrolla a
+                                    través
+                                    de "situaciones comunicativas", desde hacer check-in en un hotel hasta discutir arte
+                                    e
+                                    historia. Este programa de 3 módulos (Primary, Secondary y Tertiary) ofrece una
+                                    experiencia educativa única y vibrante.</p>
+                            </div>
                             <img src="imagenes/name_1.png"
                                 style="position: relative; margin-top: -125px; left: 7px; height: 75px; width: 190px;"
                                 alt="Name_1">
@@ -294,10 +385,15 @@
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C2.png" style="width: 220px; height: 384px; margin-left: -2px;"
                                 alt="Card-course_2">
-                            <div class="overlay"><p class="poppins-light">En este programa se exploran los secretos de los tiempos verbales en
-                                inglés a través de un enfoque teórico. Compuesto por 13 video sessions distribuidas en 5
-                                módulos, brinda una visión más profunda y estructurada para construir una base sólida en
-                                la gramática inglesa.</p></div>
+                            <div class="overlay" style="background: linear-gradient(180deg, #72eec8, #00f1e7);">
+                                <p class="poppins-light">En este programa se exploran los secretos de los tiempos
+                                    verbales en
+                                    inglés a través de un enfoque teórico. Compuesto por 13 video sessions distribuidas
+                                    en 5
+                                    módulos, brinda una visión más profunda y estructurada para construir una base
+                                    sólida en
+                                    la gramática inglesa.</p>
+                            </div>
                             <img src="imagenes/name_2.png"
                                 style="position: relative; margin-top: -117px; left: 0px; height: 75px; width: 190px;"
                                 alt="Name_2">
@@ -307,9 +403,13 @@
                         <div class="card-body rounded rounded-2 p-0">
                             <img src="imagenes/C3.png" style="width: 220px; height: 384px; margin-left: -2px;"
                                 alt="Card-course_3">
-                            <div class="overlay"><p class="poppins-light">Diseñado para niños en la primera infancia, este programa ilustrado y
-                                colorido actúa como una guía divertida para crear bases comunicativas sólidas mientras
-                                disfrutan del proceso de aprendizaje del idioma.</p></div>
+                            <div class="overlay" style="background: linear-gradient(180deg, #0d9bf3, #0708f3);">
+                                <p class="poppins-light">Diseñado para niños en la primera infancia, este programa
+                                    ilustrado y
+                                    colorido actúa como una guía divertida para crear bases comunicativas sólidas
+                                    mientras
+                                    disfrutan del proceso de aprendizaje del idioma.</p>
+                            </div>
                             <img src="imagenes/name_3.png"
                                 style="position: relative; margin-top: -117px; left: 0px; height: 130px; width: 200px;"
                                 alt="Name_3">
@@ -320,12 +420,17 @@
                             <img src="imagenes/C4.png"
                                 style="width: 220px; height: 384px;border-radius: 10px; margin-left: 1px;"
                                 alt="Card-course_4">
-                            <div class="overlay"><p class="poppins-light">Con 4 niveles (A1, A2, B1 y B2), este programa cuenta con un enfoque
-                                comunicativo. A través de conversaciones de la vida diaria, brinda la posibilidad de
-                                familiarizarse con el uso real de la lengua. Abroad ofrece una serie de herramientas
-                                para desarrollar habilidades de producción oral y escrita prestando especial atención a
-                                los rasgos fonéticos de la lengua y a la importancia de la autoevaluación en el proceso
-                                de aprendizaje.</p></div>
+                            <div class="overlay" style="background: linear-gradient(180deg, #fe7dbb, #e20737);">
+                                <p class="poppins-light">Con 4 niveles (A1, A2, B1 y B2), este programa cuenta con un
+                                    enfoque
+                                    comunicativo. A través de conversaciones de la vida diaria, brinda la posibilidad de
+                                    familiarizarse con el uso real de la lengua. Abroad ofrece una serie de herramientas
+                                    para desarrollar habilidades de producción oral y escrita prestando especial
+                                    atención a
+                                    los rasgos fonéticos de la lengua y a la importancia de la autoevaluación en el
+                                    proceso
+                                    de aprendizaje.</p>
+                            </div>
                             <img src="imagenes/name_4.png"
                                 style="position: relative; margin-top: -150px; left: 0px; height: 205px; width: 210px;"
                                 alt="Name_4">
@@ -338,9 +443,11 @@
         <!-- Planes Section -->
         <section class="plan-section">
             <div class="container text-center">
-                <button class="btn btn-custom poppins-light"
-                    style="height: 50px; width: 330px; margin-top: 65px; transform: translateY(-20px);">Ver
-                    todos los planes</button>
+                <a href="./precios.html" style="color: inherit !important;">
+                    <button class="btn btn-custom poppins-light"
+                        style="height: 50px; width: 330px; margin-top: 65px; transform: translateY(-20px);">Ver
+                        todos los planes</button>
+                </a>
                 <div class="d-flex content flex-column" style="max-height: 100vh; width: 890px; border-radius: 45px;">
                     <div class="row" style="margin-left: -35px;">
                         <div class="d-none d-lg-flex">
@@ -425,10 +532,12 @@
                                                                 <!-- <sub>USD</sub> -->
                                                             </span>
                                                         </span>
-                                                        <button
-                                                            class="button-purple rounded-pill px-4 py-1 champ-semibold text-center bi-cart-plus"
-                                                            style="transform: translateY(-10px); width: 135px; height: 45px; margin-top: -50px; margin-left: -6px;border: none; z-index: 10px; position: relative;">
-                                                            comprar</button>
+                                                        <a href="./checkout.html" style="color: inherit">
+                                                            <button
+                                                                class="button-purple rounded-pill px-4 py-1 champ-semibold text-center bi-cart-plus"
+                                                                style="transform: translateY(-10px); width: 135px; height: 45px; margin-top: -50px; margin-left: -6px;border: none; z-index: 10px; position: relative;">
+                                                                comprar</button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex"
@@ -452,10 +561,12 @@
                                                             style="margin-left: 45px; font-size: 11px;">
                                                             8.10 $</p>
                                                         <div class="d-flex ms-auto" style="margin-left: -2px;">
-                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
-                                                                style="margin-top: -4px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
-                                                                comprar
-                                                            </button>
+                                                            <a href="./checkout.html" style="color: inherit">
+                                                                <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                    style="margin-top: -4px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                    comprar
+                                                                </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -475,10 +586,12 @@
                                                             style="margin-left: 50px; font-size: 11px;">
                                                             8.10 $</p>
                                                         <div class="d-flex ms-auto" style="margin-left: -2px;">
-                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
-                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
-                                                                comprar
-                                                            </button>
+                                                            <a href="./checkout.html" style="color: inherit">
+                                                                <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                    style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                    comprar
+                                                                </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -498,10 +611,12 @@
                                                             style="margin-left: 54px; font-size: 11px;">
                                                             10.8 $</p>
                                                         <div class="d-flex ms-auto" style="margin-right: -2px;">
-                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
-                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
-                                                                comprar
-                                                            </button>
+                                                            <a href="./checkout.html" style="color: inherit">
+                                                                <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                    style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                    comprar
+                                                                </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -521,10 +636,12 @@
                                                             style="margin-left: 54px; font-size: 11px">
                                                             10.8 $</p>
                                                         <div class="d-flex ms-auto" style="margin-right: -2px;">
-                                                            <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
-                                                                style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
-                                                                comprar
-                                                            </button>
+                                                            <a href="./checkout.html" style="color: inherit">
+                                                                <button class="btn p-0 ms-4 bi-cart-plus poppins-light"
+                                                                    style="margin-top: -7px;width: 85px; height: 25px; font-size: 0.8rem; background-color: rgba(255, 255, 255, 0.5); color: whitesmoke; border-radius: 35px;z-index: 10px; position: relative">
+                                                                    comprar
+                                                                </button>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -594,15 +711,16 @@
                                     </span>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <button class="btn rounded-pill py-2 text-white fs-6 poppins-light bi-cart-plus"
-                                        style="background-color: #7955f8; border-radius: 150px; width: 130px; margin-top: -115px; margin-left: 180px">
-                                        comprar</button>
+                                    <a href="./checkout.html" style="color: inherit">
+                                        <button class="btn rounded-pill py-2 text-white fs-6 poppins-light bi-cart-plus"
+                                            style="background-color: #7955f8; border-radius: 150px; width: 130px; margin-top: -115px; margin-left: 180px">
+                                            comprar</button>
+                                    </a>
                                 </div>
                             </section>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-custom_2 mt-4" style="height: 50px; width: 330px">Ver todos los planes</button>
             </div>
             <div class="d-flex justify-content-center grid gap-0 column-gap-4"
                 style="margin-top: 810px; margin-left: -255px;">
@@ -612,7 +730,7 @@
                             <div class="col" style="max-width: 220px; margin-left: 70px; margin-top: 20px">
                                 <h1 class="poppins-light text-start" style="font-size: 18px;">Elegir
                                     <span class="champ-bold">
-                                        Michigan´s Store
+                                        Michigan's Store
                                     </span>
                                     no es solo una opción,
                                     <span class="champ-bold">
@@ -799,7 +917,7 @@
                                             <strong class="mx-2"
                                                 style="font-weight: normal; color: #2F0277; font-size: 19px">07</strong>¿Cuántos
                                             niveles
-                                            Michigan´s Store?
+                                            Michigan's Store?
                                         </span>
                                         <i class="fas fa-chevron-down" id="icon-faq1"></i>
                                     </button>
@@ -886,7 +1004,7 @@
                     <p class="poppins-light" style="font-size: 15px;color: #a9aeeb; margin-left: -50px;">Privacity
                         Policy - Terms & Agreements
                     <p class="poppins-light"
-                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2024 Michigan´s
+                        style="font-size: 15px;color: #a9aeeb; margin-top: -15px; margin-left: 55px;">@2025 Michigan's
                         Store</p>
                     <p class="poppins-light"
                         style="font-size: 15px; color: #a9aeeb; margin-top: -15px; margin-left: -2px;">Todos los
@@ -912,7 +1030,7 @@
                 <div class="mt-2">
                     <p class="poppins-light" style="color: #a9aeeb;">Privacity Policy - Terms & Agreements</p>
                 </div>
-                <p class="mt-n2 poppins-light" style="font-size: 11px; color: #a9aeeb;">©2024 UpGrade | Todos los
+                <p class="mt-n2 poppins-light" style="font-size: 11px; color: #a9aeeb;">©2025 UpGrade | Todos los
                     derechos reservados
                 </p>
             </div>
