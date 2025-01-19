@@ -111,7 +111,31 @@
       overflow-y: hidden;
       pointer-events: auto;
     }
+    /*Por ahora jaja*/
+    .modal-content {
+      background-color: #351C76;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      border: 2px solid #ffffff;
+    }
 
+    .modal-header {
+      border-bottom: none;
+      color: white;
+    }
+
+    .modal-dialog-centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .modal-body video {
+      border-radius: 10px;
+      border: 3px solid #ff9d00;
+      background-color: black;
+    }
   </style>
 </head>
 
@@ -225,8 +249,8 @@
                 </div>
               </div>
               <!--Videos interactivos-->
-              <div class="modal fade" id="VerAhora-1" tabindex="-1" aria-labelledby="VerAhora-1"
-                aria-hidden="true" style="overflow-y: hidden !important">
+              <div class="modal fade" id="VerAhora-1" tabindex="-1" aria-labelledby="VerAhora-1" aria-hidden="true"
+                style="overflow-y: hidden !important">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -461,8 +485,7 @@
                     </div>
                     <div class="modal-body">
                       <video width="320" height="240" autoplay="autoplay" controls="controls">
-                        <source src="./videos/Aprende Inglés con Michigan Master.mp4"" type=" video/mp4">
-                      </VerAhora1>
+                        <source src="./videos/Aprende Inglés con Michigan Master.mp4" type=" video/mp4">
                     </div>
                   </div>
                 </div>
@@ -511,7 +534,8 @@
                   style="width: 505px; height: 120px; background-color: #443D5D; border-radius: 10px; overflow: hidden; pointer-events: auto;">
                   <div
                     class="scroll-container d-flex flex-row content justify-content-start flex-row gap-2 interactive-container"
-                    style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)" data-bs-toggle="modal" data-bs-target="#VerAhora-1">
+                    style="width: 100%; height: 100%; overflow-x: auto; overflow-y: hidden; padding: 20px; padding-left: -10px; scrollbar-width: none; border-radius: 45px; transform: translateY(-1px)"
+                    data-bs-toggle="modal" data-bs-target="#VerAhora-1">
                     <div style="pointer-events: auto;" oncontextmenu="return false">
                       <img src="imagenes/optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" alt="Eye 1">
@@ -751,7 +775,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_1">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora2" alt="Eye 2">
@@ -764,7 +788,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_2">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora3" alt="Eye 3">
@@ -777,7 +801,7 @@
                         style="margin-top: -114px; height:  85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_3">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora4" alt="Eye 4">
@@ -790,7 +814,7 @@
                         style="margin-top: -114px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_4">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora5" alt="Eye 5">
@@ -803,7 +827,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_5">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora6" alt="Eye 6">
@@ -816,7 +840,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_6">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora7" alt="Eye 7">
@@ -829,7 +853,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_7">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora8" alt="Eye 8">
@@ -842,7 +866,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_8">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora9" alt="Eye 9">
@@ -856,7 +880,7 @@
                         style="margin-top: -115px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_9">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora10" alt="Eye 10">
@@ -869,7 +893,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_10">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora11" alt="Eye 11">
@@ -882,7 +906,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_11">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <!--Desabilita que el usaurio guarde las imagenes ayudando en derechos de autor-->
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px; user-select: none; pointer-events: none;"
@@ -897,7 +921,7 @@
                         style="margin-top: -104px; height: 85px; width: 75px; object-fit: cover; border-radius: inherit; transform: translateY(-1px)"
                         alt="Tono_12">
                     </div>
-                    <div oncontextmenu="return false"  style="pointer-events: auto">
+                    <div oncontextmenu="return false" style="pointer-events: auto">
                       <img src="imagenes\optic.png"
                         style="height: 85px; width: 75px; object-fit: cover; border-radius: 5px" data-bs-toggle="modal"
                         data-bs-target="#VerAhora13" alt="Eye 11">
@@ -2037,7 +2061,7 @@
   </main>
 
   <!-- Footer PC-->
-  <div class="d-none d-block d-lg-block" style="margin-top: 195px; margin-left: 88px">
+  <div class="d-none d-block d-lg-block" style="margin-top: 195px; margin-left: 88px;">
     <footer class="gradient-customs text-white p-4 col-md-4 p-md-5 text-center mx-auto"
       style="width: 1345px; height: 150px">
       <div class="d-flex justify-content-center  text-center row">

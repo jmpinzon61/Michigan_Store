@@ -79,8 +79,8 @@
 
     <!-- Contenido de la página de Verificación -->
     <main class="container-fluid p-5 rounded text-light" style="background: transparent !important; overflow-x: hidden">
-        <!-- Vista PC grande-->
-        <div class="d-none d-xxl-block">
+        <!-- Vista PC grande y mediano-->
+        <div class="d-md-none d-xl-block">
             <div class="container"
                 style="max-width: 1350px; border: 3px solid; color: #ffffff; border-radius: 85px; height: 1075px">
                 <!-- Tu contenido aquí -->
@@ -183,7 +183,7 @@
                                         style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px;height: 60px; width: 255px"
                                         id="expiry" placeholder="MM/AA">
                                 </div>
-                                <div class="col-4" style="margin-left: -15px; width: 275px">
+                                <div class="col-4" style="margin-left: -25px; width: 275px">
                                     <label for="cvv" class="form-label poppins-light" style="margin-left: 30px">Código
                                         de
                                         seguridad</label>
@@ -191,8 +191,10 @@
                                         <input type="text" class="form-control placeholder-white"
                                             style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px; height: 60px; width: 255px"
                                             id="cvv" placeholder="CVV">
-                                        <img class="custom-tooltip poppins-light" src="./imagenes/Question.png" alt="question" data-bs-toggle="tooltip" data-bs-placement="top" title="Nunca compartas tu código de seguridad CVV con nadie. Es crucial para proteger tu información financiera y evitar fraudes."
-                                            style="position: absolute; height: 25px; width: 25px; right: 175px; margin-top: -1px; margin: 10px 10px 10px 10px; color:#504a82">
+                                        <img class="custom-tooltip poppins-light" src="./imagenes/Question.png"
+                                            alt="question" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Nunca compartas tu código de seguridad CVV con nadie. Es crucial para proteger tu información financiera y evitar fraudes."
+                                            style="position: absolute; height: 25px; width: 25px; margin-right: -185px; margin-top: -1px; color:#504a82">
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +221,7 @@
                                 Completar pago con:
                             </p>
                             <div class="row grid gap-2 gap-row-2"
-                                style="margin-left: 527px; width: 320px; position: relative; z-index: 2;">
+                                style="margin-left: 542px; width: 320px; position: relative; z-index: 2;">
                                 <a href="https://www.payu.com/" target="_blank"
                                     style="height: 44px; width: 80px; background-color: #ffffff; border-radius: 45px; display: flex; align-items: center; justify-content: center;">
                                     <img src="./imagenes/PAYU_LOGO_LIME 1.png" alt="PayU" class="img-fluid"
@@ -247,191 +249,23 @@
                                 id="cvv" placeholder="">
                         </div>
                         <div
-                            style="color: #ffffff !important; border: 1px solid; width: 547px; margin-left: 538px; margin-top: 50px">
+                            style="color: #ffffff !important; border: 1px solid; width: 547px; margin-left: 555px; margin-top: 50px">
                         </div>
                         <button class="btn btn-accept poppins-bold">Aceptar y Comprar</button>
                     </div>
                 </div>
             </div>
-
-            <!-- Vista PC mediano-->
-            <div class="d-none d-lg-block d-xxl-none">
-                <div class="container" style="max-width: 1000px">
-                    <!-- Tu contenido aquí -->
-                    <div class="text-center mb-4">
-                        <img src="./svg/Icon.svg" alt="Logo_question">
-                        <h1 class="champ-bold fs-4"
-                            style="margin-top: -50px; transform: translateY(-85px); margin-left: 320px">
-                            Michigan's</h1>
-                        <h1 class="champ-bold fs-4"
-                            style="margin-top: -50px; transform: translateY(-50px); margin-left: 320px">
-                            Store</h1>
-                        <p class="poppins-light fs-5"
-                            style="transform: translateY(35px);background: #7974f5; -webkit-background-clip: text; color: transparent">
-                            ¡Estás a un clic de empezar a vivir esta gran experiencia!Agrega tu información de pago y
-                            empieza de
-                            inmediato.</p><br>
-                        <p class="poppins-light fs-5">Agrega tu información de pago y empieza de inmediato.</p>
-                    </div>
-                    <div class="row" style="margin-top: 65px">
-                        <!-- Productos Seleccionados -->
-                        <div class="col-md-6">
-                            <h2 class="poppins-bold fs-5 mb-3 bi-cart-plus"> Producto seleccionado</h2>
-                            <div
-                                style="color: #ffffff !important; border: 1px solid; width: 204px; transform:translateY(-27px); margin-left: 240px">
-                            </div>
-                            <div class="mb-3 p-3 mt-5"
-                                style="background-color: #5a5584; width: 395px; height: 75px; border-radius: 9rem">
-                                <p class="d-flex justify-content-between align-items-center option-container mx-2"
-                                    onclick="toggleSelection(this)">
-                                    <span style="font-size: 16px; width: 125px">
-                                        Suscripción
-                                        <br />
-                                        <span class="text-white" style="position: relative; top: -4px;">mensual</span>
-                                    </span>
-                                    <span class="champ-bold"
-                                        style="font-size: 20px; margin-left: 30px; width: 125px; line-height: -10px">21.60
-                                        USD</span>
-                                    <img src="./imagenes/ring.png" alt="Selection Image" class="toggle-image"
-                                        style="height: 24px; cursor: pointer; margin-right: 45px; transform: translateX(50px); margin-top: -5px">
-                                </p>
-                            </div>
-                            <div class="mb-3 p-3"
-                                style="background-color: #5a5584; width: 395px; height: 75px; border-radius: 9rem">
-                                <p class="d-flex justify-content-between align-items-center option-container mx-2"
-                                    onclick="toggleSelection(this)">
-                                    <span style="font-size: 16px; width: 125px">
-                                        UpColors Full
-                                        <br />
-                                        <span class="text-white" style="position: relative; top: -4px;">(4
-                                            Módulos)</span>
-                                    </span>
-                                    <span class="champ-bold"
-                                        style="font-size: 20px; margin-left: 30px; width: 125px; line-height: -10px">37.80
-                                        USD</span>
-                                    <img src="./imagenes/ring.png" alt="Selection Image" class="toggle-image"
-                                        style="height: 24px; cursor: pointer; margin-right: 45px; transform: translateX(50px); margin-top: -5px">
-                                </p>
-                            </div>
-                            <div class="mb-3 p-3"
-                                style="background-color: #5a5584; width: 395px; height: 75px; border-radius: 9rem">
-                                <p class="d-flex justify-content-between align-items-center option-container mx-2"
-                                    onclick="toggleSelection(this)">
-                                    <span style="font-size: 16px; width: 125px">
-                                        UpColors
-                                        <br />
-                                        <span class="text-light" style="position: relative; top: -4px;">Módulo 2</span>
-                                    </span>
-                                    <span class="champ-bold"
-                                        style="font-size: 20px; margin-left: 30px; width: 125px; line-height: -10px">8.10
-                                        USD</span>
-                                    <img src="./imagenes/ring.png" alt="Selection Image" class="toggle-image"
-                                        style="height: 24px; cursor: pointer; margin-right: 45px; transform: translateX(50px); margin-top: -5px">
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Formulario de Pago -->
-                        <div class="col-md-6">
-                            <h2 class="poppins-bold fs-5 mb-3"><img src="./svg/Credit-card.svg" alt="Card">
-                                Crédito/Débito</h2>
-                            <div
-                                style="color: #ffffff !important; border: 1px solid; width: 354px; transform:translateY(-27px); margin-left: 180px">
-                            </div>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label poppins-light">Nombre y Apellido</label>
-                                    <input type="text" class="form-control"
-                                        style="text-indent: 10px; box-shadow: none;color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px;height: 60px; width: 535px"
-                                        id="name" placeholder="">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="card-number" class="form-label poppins-light">Número de tarjeta</label>
-                                    <input type="text" class="form-control"
-                                        style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px;height: 60px; width: 535px"
-                                        id="card-number" placeholder="">
-                                </div>
-                                <div class="row g-3">
-                                    <div class="col-6">
-                                        <label for="expiry" class="form-label poppins-light">Fecha de expiración</label>
-                                        <input type="text" class="form-control placeholder-white"
-                                            style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px;height: 60px; width: 255px"
-                                            id="expiry" placeholder="MM/AA">
-                                    </div>
-                                    <div class="col-4" style="margin-left: -1px">
-                                        <label for="cvv" class="form-label poppins-light">Código de seguridad</label>
-                                        <div style="position: relative; display: inline-block;">
-                                            <input type="text" class="form-control placeholder-white"
-                                                style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: none; border-radius: 85px; height: 60px; width: 255px; padding: 10px;"
-                                                id="cvv" placeholder="CVV">
-                                            <img src="./imagenes/Question.png" alt="question"
-                                                style="position: absolute; height: 25px; width: 25px; right: 20px; top: 50%; transform: translateY(-50%);">
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="form-check form-switch mt-3">
-                                    <label class="form-check-slabel poppins-light"
-                                        style="margin-left: -46px; width: 410px; font-size: 15px"
-                                        for="save-info">Guardar mis
-                                        datos de pago para futuras compras</label>
-                                    <input class="form-check-input" style="transform: translateX(390px)" type="checkbox"
-                                        id="save-info">
-                                    <div
-                                        style="color: #ffffff !important; border: 1px solid; width: 547px; transform:translateY(20px); margin-left: -45px">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Métodos de Pago -->
-                    <div class="row text-center">
-                        <p class="poppins-light fs-6" style="margin-top: 55px; margin-left: 145px">Completar pago con:
-                        </p>
-                        <div class="d-flex row justify-content-center gap-3" style="margin-left: 430px">
-                            <a style="height: 44px; width: 80px; background-color: #ffffff; border-radius: 45px"
-                                href="https://www.payu.com/" target="_blank">
-                                <img src="./imagenes/PAYU_LOGO_LIME 1.png" alt="PayU" class="img-fluid"
-                                    style="height: 66px;width: 82px; padding: 5px; transform: translateY(-11px)">
-                            </a>
-                            <a style="height: 44px; width: 80px; background-color: #ffffff; border-radius: 45px"
-                                href="https://www.paypal.com/" target="_blank">
-                                <img src="./imagenes/Paypal.png" alt="PayPal" class="img-fluid"
-                                    style="height:40px; width:39px; padding: 5px; transform: translateY(3px)">
-                            </a>
-                            <a style="height: 44px; width: 80px; background-color: #ffffff; border-radius: 45px"
-                                href="https://www.pse.com.co/" target="_blank">
-                                <img src="./imagenes/pse-logo.png" alt="PSE" class="img-fluid"
-                                    style="height:40px; width:61px; padding: 5px; transform: translateY(3px)">
-                            </a>
-                            <div class="col-md-6" style="margin-top: -40px">
-                                <label for="cvv" class="form-label poppins-light"
-                                    style="margin-left: -325px; font-size: 14px;color: #ee2b6b">¡Tengo un cupón de
-                                    descuento!</label>
-                                <input type="text" class="form-control placeholder-white"
-                                    style="text-indent: 10px; box-shadow: none; color: #ffffff; background: linear-gradient(to right, #504a82, #716d87); border: 2px solid#ee2b6b !important; border-radius: 85px; height: 54px; width: 250px; margin-left: -4px"
-                                    id="cvv" placeholder="">
-                            </div>
-                        </div>
-                        <div
-                            style="color: #ffffff !important; border: 1px solid; width: 547px; margin-left: 579px; margin-top: 40px">
-                        </div>
-                        <button class="btn btn-accept-md  poppins-bold">Aceptar y Comprar</button>
-                    </div>
-                </div>
-
-            </div>
+        </div>
     </main>
     <script src="./templates/js/toggle_selection.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          var tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-          tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-            new bootstrap.Tooltip(tooltipTriggerEl);
-          });
+            var tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl);
+            });
         });
-      </script>
+    </script>
 </body>
 
 </html>
